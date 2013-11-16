@@ -635,7 +635,7 @@ pre code {
 #tag-cloud a:hover { color: #ae432e !important; }
 #contacts-list { margin-top: 6px; }
 #contacts-list a { margin-right: 2px; }
-#fixed-container { width: 100%; }
+#fixed-container { width: 271px; }
 
 /*  DuoShuo  */
 #ds-thread { clear: none !important; }
