@@ -39,7 +39,7 @@ body, select, input, textarea { color: #444; }
 /*  General Settings  */
 body {
   background-image: url(../img/bgs/bg_body.png);
-  font-family: Verdana, Arial, sans-serif, "Microsoft YaHei";
+  font-family: Verdana, Arial, sans-serif, "Hiragino Sans GB", "Microsoft YaHei";
   font-size: 13px;
   *font-size: small;
   zoom: 1;
@@ -68,11 +68,6 @@ a:hover, a:active { outline: none; }
 .pull-left { float: left; }
 .pull-right { float: right; }
 .clearfix { zoom: 1; clear: both; }
-.hidden {
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
 
 /*  Main  */
 #wrap {
@@ -696,4 +691,19 @@ pre code {
 #loader img {
   display: block;
   margin: 40px auto;
+}
+
+/*  Responsive UI  */
+@media (max-width: 999px) {
+  #wrap { width: 100%; }
+  #sidebar { display: none; }
+  #main { background: none; }
+  #main-inner {
+    margin-left: 0;
+    padding: 20px;
+  }
+  article header {
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
