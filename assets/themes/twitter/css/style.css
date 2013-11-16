@@ -691,10 +691,9 @@ pre code {
 
 /*  Ajax Loader  */
 #loader {
-  width: 50%;
-  margin: 40px auto;
+  display: none;
 }
 #loader img {
   display: block;
-  margin: 0 auto;
+  margin: 40px auto;
 }

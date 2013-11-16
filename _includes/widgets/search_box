@@ -71,13 +71,16 @@ $(document).ready(function() {
       html += '<footer><p>更新日期：' + match.date + '</p></footer>';
       html += '</article>';
     }
-    $('#main-inner').html(html);
+    $('#main-content').html(html);
+    $('#loader').hide();
+    $('#main-content').show();
   }
 
   $('#search-form').submit(function() {
     var query = $('#query').val();
     $('#query').blur().attr('disabled', true);
-    $('#main-inner').html('<div id="loader"><img src="{{ ASSET_PATH }}/img/loading.gif" alt="请稍侯"></div>');
+    $('#main-content').hide();
+    $('#loader').show();
     if (entries == null) {
       $.ajax({url: '/atom.xml?r=' + (Math.random() * 99999999999), dataType: 'xml', success: function(data) {
         entries = data.getElementsByTagName('entry');

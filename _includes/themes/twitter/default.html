@@ -58,7 +58,7 @@
             <a href="{{ site.JB.about_path }}" rel="nofollow" title="关于我">关于我</a>
           </li>
           <li>
-            <a href="{{ site.JB.rss_path }}" rel="nofollow" title="订阅RSS"><i class="icon-large icon-fixed-width icon-rss"></i></a>
+            <a href="{{ site.JB.rss_path }}" rel="nofollow" title="订阅 RSS"><i class="icon-large icon-fixed-width icon-rss"></i></a>
           </li>
         </ul>
       </nav>
@@ -85,7 +85,10 @@
 
       <!-- Main Content -->
       <div id="main-inner">
-      	{{ content }}
+        <div id="loader"><img src="{{ ASSET_PATH }}/img/loading.gif" alt="请稍侯"></div>
+        <div id="main-content">
+          {{ content }}
+        </div>
       </div>
 
       {% include widgets/back_top_button %}
