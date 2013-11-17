@@ -284,7 +284,10 @@ button {
   border-color: #cb6652 #b74d39 #803121;
   background: -moz-linear-gradient(top, #faa796, #d06c57 5%, #ae432e 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#faa796), to(#ae432e), color-stop(0.05, #d06c57));
+  background: -webkit-linear-gradient(top, #faa796, #d06c57 5%, #ae432e 100%);
   background: -o-linear-gradient(top, #faa796, #d06c57 5%, #ae432e 100%);
+  background: -ms-linear-gradient(top, #faa796, #d06c57 5%, #ae432e 100%);
+  background: linear-gradient(to bottom, #faa796, #d06c57 5%, #ae432e 100%);
   padding: 4px 15px;
   -webkit-box-shadow: 0 1px 2px #999;
   -moz-box-shadow: 0 1px 2px #999;
@@ -296,33 +299,48 @@ button {
 button:hover {
   background: -moz-linear-gradient(top, #faa796, #d06c57 5%, #943a28 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#faa796), to(#943a28), color-stop(0.05, #d06c57));
+  background: -webkit-linear-gradient(top, #faa796, #d06c57 5%, #943a28 100%);
   background: -o-linear-gradient(top, #faa796, #d06c57 5%, #943a28 100%);
+  background: -ms-linear-gradient(top, #faa796, #d06c57 5%, #943a28 100%);
+  background: linear-gradient(to bottom, #faa796, #d06c57 5%, #943a28 100%);
   color: #fff;
 }
 button.blue { 
   border-color: #1495cc #2b8ab3 #066d99;
   background: -moz-linear-gradient(top, #afe3fa, #6cb8d9 5%, #088ec8 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#afe3fa), to(#088ec8), color-stop(0.05, #6cb8d9));
+  background: -webkit-linear-gradient(top, #afe3fa, #6cb8d9 5%, #088ec8 100%);
   background: -o-linear-gradient(top, #afe3fa, #6cb8d9 5%, #088ec8 100%);
+  background: -ms-linear-gradient(top, #afe3fa, #6cb8d9 5%, #088ec8 100%);
+  background: linear-gradient(to bottom, #afe3fa, #6cb8d9 5%, #088ec8 100%);
   color: #ebf9ff;
 }
 button.blue:hover {
   background: -moz-linear-gradient(top, #afe3fa, #6cb8d9 5%, #077bad 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#afe3fa), to(#077bad), color-stop(0.05, #6cb8d9));
+  background: -webkit-linear-gradient(top, #afe3fa, #6cb8d9 5%, #077bad 100%);
   background: -o-linear-gradient(top, #afe3fa, #6cb8d9 5%, #077bad 100%);
+  background: -ms-linear-gradient(top, #afe3fa, #6cb8d9 5%, #077bad 100%);
+  background: linear-gradient(to bottom, #afe3fa, #6cb8d9 5%, #077bad 100%);
   color: #fff;
 }
 button.green { 
   border-color: #8dcc18 #7cb315 #6a9912;
   background: -moz-linear-gradient(top, #d7fa96, #abd957 5%, #78ac15 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#d7fa96), to(#78ac15), color-stop(0.05, #abd957));
+  background: -webkit-linear-gradient(top, #d7fa96, #abd957 5%, #78ac15 100%);
   background: -o-linear-gradient(top, #d7fa96, #abd957 5%, #78ac15 100%);
+  background: -ms-linear-gradient(top, #d7fa96, #abd957 5%, #78ac15 100%);
+  background: linear-gradient(to bottom, #d7fa96, #abd957 5%, #78ac15 100%);
   color: #f7ffe5;
 }
 button.green:hover {
   background: -moz-linear-gradient(top, #d7fa96, #abd957 5%, #659111 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#d7fa96), to(#659111), color-stop(0.05, #abd957));
+  background: -webkit-linear-gradient(top, #d7fa96, #abd957 5%, #659111 100%);
   background: -o-linear-gradient(top, #d7fa96, #abd957 5%, #659111 100%);
+  background: -ms-linear-gradient(top, #d7fa96, #abd957 5%, #659111 100%);
+  background: linear-gradient(to bottom, #d7fa96, #abd957 5%, #659111 100%);
   color: #fff;
 }
 button:disabled {
@@ -334,7 +352,8 @@ button:disabled {
   color: #a0a0a0;
 }
 
-/*  Content Images  */
+/*  Image  */
+#logo img { border: none; }
 article img {
   padding: 4px;
   background-color: #fff;
@@ -495,6 +514,7 @@ pre code {
 }
 #search-form button {
   margin-left: 8px;
+  width: 50px;
   float: right;
 }
 
@@ -633,7 +653,12 @@ pre code {
 #fixed-container { width: 271px; }
 
 /*  DuoShuo  */
-#ds-thread { clear: none !important; }
+#ds-thread {
+  clear: none !important;
+  float: left;
+  margin-top: 0;
+  width: 100%;
+}
 #ds-reset .ds-avatar img {
   width: 54px !important;
   height: 54px !important;
@@ -657,7 +682,7 @@ pre code {
 #bdshare_s a, #bdshare_s h6, #bdshare a, #bdshare span {
   font-family: inherit !important;
 }
-#bdshare_l_c >p {
+#bdshare_l_c p, #bdshare_pop p {
   display: none;
 }
 
