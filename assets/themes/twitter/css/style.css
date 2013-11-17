@@ -178,6 +178,7 @@ a:hover, a:active { outline: none; }
 }
 
 #content { margin-bottom: 35px; }
+#comments { overflow: hidden; }
 
 /*  Articles  */
 article {
