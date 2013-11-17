@@ -3,7 +3,7 @@ layout: post
 title: "Makefile 教程"
 keywords: ["Makefile"]
 description: "Makefile 使用详解"
-category: programming
+category: misc
 tags: [makefile]
 ---
 {% include JB/setup %}
@@ -12,7 +12,7 @@ _本文系转载，原文链接未知。_
 
 ### 概述
 
-什么是 makefile?或许很多 Winodws 的程序员都不知道这 个东西,因为那些 Windows 的 IDE 都为你做了这个
+什么是 makefile?或许很多 Winodws 的程序员都不知道这个东西,因为那些 Windows 的 IDE 都为你做了这个
 工作,但我觉得要作一个好的和 professional 的程序员,makefile 还是要懂。这就 好像现在有这么多的 HTML
 的编辑器,但如果你想成为一个专业人士,你还是要了解 HTML 的标识的含义。特别在 Unix 下的软件编译,
 你就不能不自己写 makefile 了,会不会写 makefile,从一个侧面说明了一个人是否具备完成大型工程的能力。

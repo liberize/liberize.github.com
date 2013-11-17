@@ -3,7 +3,7 @@ layout: post
 title: "sed 学习笔记"
 keywords: ["sed"]
 description: "sed 学习笔记"
-category: "programming"
+category: "misc"
 tags: [sed]
 ---
 {% include JB/setup %}

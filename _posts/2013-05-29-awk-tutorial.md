@@ -3,7 +3,7 @@ layout: post
 title: "awk 学习笔记"
 keywords: ["awk"]
 description: "awk 学习笔记"
-category: "programming"
+category: "misc"
 tags: [awk]
 ---
 {% include JB/setup %}
