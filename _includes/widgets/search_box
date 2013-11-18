@@ -1,11 +1,11 @@
 <form id="search-form">
-  <input id="query" type="text" placeholder="搜一搜"></input>
+  <input id="query" type="text" placeholder="正则搜索"></input>
   <button type="submit"><i class="icon-search"></i></button>
 </form>
 <script type="text/javascript">
 $(document).ready(function() {
   var entries = null;
-  
+
   function htmlEscape(s) {
     return String(s).replace(/[&<>"'\/]/g, function(s) {
       var entityMap = {
@@ -52,12 +52,14 @@ $(document).ready(function() {
   function findEntries(q) {
     var matches = [];
     var rq = new RegExp(q, 'im');
+    var rl = /^http:\/\/liberize\.me\/post\/(.+)\.html$/;
     for (var i = 0; i < entries.length; i++) {
       var entry = entries[i];
       var title = $(entry.getElementsByTagName('title')[0]).text();
       var link = $(entry.getElementsByTagName('link')[0]).attr('href');
+      var title_en = rl.exec(link)[1].replace(/-/g, ' ');
       var content = $(entry.getElementsByTagName('content')[0]).text();          
-      if (rq.test(title) || rq.test(link) || rq.test(content)) {
+      if (rq.test(title) || rq.test(title_en) || rq.test(content)) {
         var updated = formatDate(xmlDateToJavascriptDate($(entry.getElementsByTagName('updated')[0]).text()));
         matches.push({'title': title, 'link': link, 'date': updated, 'content': content});
       }
