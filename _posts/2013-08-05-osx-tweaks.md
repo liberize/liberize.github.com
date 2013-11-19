@@ -4,7 +4,7 @@ title: "OS X 使用技巧"
 keywords: ["Mac OS X", "技巧"]
 description: "OS X 使用技巧"
 category: "mac os x"
-tags: ["mac os x", "tweak"]
+tags: ["mac os x"]
 ---
 {% include JB/setup %}
 

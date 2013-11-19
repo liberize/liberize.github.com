@@ -4,7 +4,7 @@ title: "Bootstrap 简单定制"
 keywords: ["Bootstrap", "定制", "搜索框", "代码高亮", "评论"]
 description: "Bootstrap 简单定制，添加搜索、代码高亮、评论与分析系统等"
 category: web
-tags: [jekyll, bootstrap, tweak]
+tags: [jekyll, bootstrap]
 ---
 {% include JB/setup %}
 {% raw %}
