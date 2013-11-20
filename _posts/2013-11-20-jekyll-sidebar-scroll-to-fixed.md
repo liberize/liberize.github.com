@@ -31,7 +31,7 @@ tags: ["jekyll", "特效"]
 
 ## 二、编写js代码
 
-添加以下 js 代码，响应窗口的滚动事件。将 `fixed-container` 的样式改为 `position: fixed; top: 0;`，让它位置固定，改为 `position: static;` 让它恢复原样。
+添加以下 js 代码，响应窗口的滚动事件。滚动到 `fixed-container` 顶端时，将其的样式设为 `position: fixed; top: 0;`，让它位置固定，否则设为 `position: static;` 让它恢复原样。
 
 ```javascript
 $(document).ready(function() {
