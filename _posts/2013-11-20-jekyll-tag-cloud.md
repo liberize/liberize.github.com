@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll 博客不用 JS 生成标签云"
+title: "Jekyll: 不用 JS 生成标签云"
 keywords: ["Jekyll", "标签云"]
 description: "一种使用纯 Liquid 语法、不用 JavaScript 生成标签云的方法"
 category: "web"
@@ -56,6 +56,6 @@ tags: ["jekyll", "标签云"]
 {% endfor %}
 ```
 
-以上两段代码合在一起就可以生成一系列不同样式的 a 标签，从而生成了标签云。具体效果请看本博客左侧边栏。
+实际效果请看本博客左侧边栏。
 
 {% endraw %}
