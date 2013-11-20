@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll: 不用 JS 生成标签云"
+title: "Jekyll 不用 JS 生成标签云"
 keywords: ["Jekyll", "标签云"]
 description: "一种使用纯 Liquid 语法、不用 JavaScript 生成标签云的方法"
 category: "web"

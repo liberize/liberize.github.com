@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll: 基于 Feed 实现静态搜索"
+title: "Jekyll 基于 Feed 实现静态搜索"
 keywords: ["Jekyll", "Feed", "静态", "搜索"]
 description: "一种比较理想的基于 Feed 的静态博客搜索的实现方式"
 category: "web"
