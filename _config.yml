@@ -138,6 +138,3 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
-
-gcse:
-  cx : '011163455484003751566:20cxvcrvfpq'
