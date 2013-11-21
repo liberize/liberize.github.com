@@ -17,7 +17,7 @@ tags: ["jekyll", "评论"]
 
 添加多说非常简单，只需要加入一段 js 代码，然后在需要显示评论框的地方插入一个 div 标签即可。除了评论框以外，多说还支持显示评论次数、最新评论、最近访客或热评文章，使用方法基本相同。
 
-此处仅演示评论框的使用。可以直接将下面一段代码加入到你的 post 模板中，注意设置 `short_name`。写到这里禁不住要吐槽一番 —— 多说的 js 代码跟 Disqus 的简直如出一辙，赤果果的抄袭呀。
+此处仅演示评论框的使用。可以直接将下面一段代码加入到你的 post 模板中，注意设置 `short_name`。忍不住吐槽一句，多说的 js 代码跟 Disqus 的简直如出一辙，赤果果的抄袭呀。
 
 ```html
 <div id="ds-thread" class="ds-thread" data-url="{{ page.url }}" data-title="{{ page.title }}" data-thread-key="{{ page.title }}"></div>
@@ -33,7 +33,9 @@ var duoshuoQuery = {short_name: '{{ site.JB.comments.duoshuo.short_name }}'};
 </script>
 ```
 
-如果你使用的是 Bootstrap 框架，这里推荐另一种做法。首先将以上代码保存为 duoshuo，放到 `_includes/JB/comments-providers` 文件夹下，然后修改 `_includes/JB/comments` 文件，加入多说的判断语句，如下所示，
+如果你使用的是 Bootstrap 框架，这里推荐另一种做法。
+
+首先将以上代码保存为 duoshuo，放到 `_includes/JB/comments-providers` 文件夹下。然后修改 `_includes/JB/comments` 文件，加入多说的判断语句，如下所示，
 
 ```
 {% case site.JB.comments.provider %}
