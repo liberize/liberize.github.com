@@ -22,7 +22,7 @@ tags: ["mac os x"]
 
 ### 2. 更改 Home 键和 End 键
 
-习惯了按 Home 和 End 键跳到行首和行尾，转到 OS X 很不习惯，果断改之。首先，运行 KeyFixer，将会在 `~/Library/KeyBindings` 下生成 `DefaultKeyBinding.dict` 文件，这样在多数应用程序中就可以按 Home 和 End 键跳到行首和行尾啦，但是 Firefox 不行（吐槽一下，Firefox 很多地方与 OS X 的融合不是很好，比如网页中右键没有“在字典中查找”，还有打开快播时顶栏和 Dock 消失等等，而 Chrome 没有这些问题）。然后，参照 [ANSI 控制码](http://liberize.github.io/2013/08/04/ansi-escape-code/#toc_7) 一文修改终端 Home 和 End 键的行为。这样一来用起来就顺手多了。
+习惯了按 Home 和 End 键跳到行首和行尾，转到 OS X 很不习惯，果断改之。首先，运行 KeyFixer，将会在 `~/Library/KeyBindings` 下生成 `DefaultKeyBinding.dict` 文件，这样在多数应用程序中就可以按 Home 和 End 键跳到行首和行尾啦，但是 Firefox 不行（吐槽一下，Firefox 很多地方与 OS X 的融合不是很好，比如网页中右键没有“在字典中查找”，还有打开快播时顶栏和 Dock 消失等等，而 Chrome 没有这些问题）。然后，参照 [ANSI 控制码](/post/ansi-escape-code.html#toc_7) 一文修改终端 Home 和 End 键的行为。这样一来用起来就顺手多了。
 
 ### 3. 设置应用程序快捷键
 
@@ -71,4 +71,4 @@ OS X 下设置应用程序快捷键只需在“系统偏好设置” -> “键�
 
 * 使用 DictUnifier 转换星际译王词典并自动添加到 Mac 自带字典程序。
 * 利用 Automator 创建服务使得像图像缩放旋转，转换图像格式，给视频下载字幕（参考[这里](http://fduo.org/use-applescript-to-fetch-subtitles-from-shooter-cn/)）等常用操作都可以在 Finder 中右键完成。
-* 创建并使用内存盘，加快系统运行速度（参考[这里](http://liberize.github.io/2013/08/05/create-ramdisk-in-osx/)）。
+* 创建并使用内存盘，加快系统运行速度（参考[这里](/post/create-ramdisk-in-osx.html)）。

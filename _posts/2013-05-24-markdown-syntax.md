@@ -8,7 +8,7 @@ tags: [markdown]
 ---
 {% include JB/setup %}
 
-*转载自：[http://wowubuntu.com/markdown/basic.html](http://wowubuntu.com/markdown/basic.html)*
+*转载自：<http://wowubuntu.com/markdown/basic.html>*
 
 <h2 id="overview">概述</h2>
 
@@ -16,14 +16,7 @@ tags: [markdown]
 
 Markdown 的目标是实现「易读易写」。
 
-可读性，无论如何，都是最重要的。一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 [Setext] [1]、[atx] [2]、[Textile] [3]、[reStructuredText] [4]、[Grutatext] [5] 和 [EtText] [6]，而最大灵感来源其实是纯文本电子邮件的格式。
-
-  [1]: http://docutils.sourceforge.net/mirror/setext.html
-  [2]: http://www.aaronsw.com/2002/atx/
-  [3]: http://textism.com/tools/textile/
-  [4]: http://docutils.sourceforge.net/rst.html
-  [5]: http://www.triptico.com/software/grutatxt.html
-  [6]: http://ettext.taint.org/doc/
+可读性，无论如何，都是最重要的。一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 Setext、atx、Textile、reStructuredText、Grutatext 和 EtText，而最大灵感来源其实是纯文本电子邮件的格式。
 
 总之， Markdown 的语法全由一些符号所组成，这些符号经过精挑细选，其作用一目了然。比如：在文字两旁加上星号，看起来就像\*强调\*。Markdown 的列表看起来，嗯，就是列表。Markdown 的区块引用看起来就真的像是引用一段文字，就像你曾在电子邮件中见过的那样。
 
@@ -651,7 +644,7 @@ Markdown 会转成：
     &#109;">&#x61;&#x64;&#x64;&#x72;&#x65;&#115;&#115;&#64;&#101;&#120;&#x61;
     &#109;&#x70;&#x6C;e&#x2E;&#99;&#111;&#109;</a>
 
-在浏览器里面，这段字串（其实是 `<a href="mailto:address@example.com">address@example.com</a>`）会变成一个可以点击的 "address@example.com" 链接。
+在浏览器里面，这段字串（其实是 `<a href="mailto:address@example.com">address@example.com</a>`）会变成一个可以点击的 `address@example.com` 链接。
 
 （这种作法虽然可以糊弄不少的机器人，但并不能全部挡下来，不过总比什么都不做好些。不管怎样，公开你的信箱终究会引来广告信件的。）
 
@@ -675,50 +668,3 @@ Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的�
     -   减号
     .   英文句点
     !   惊叹号
-
-<h2 id="acknowledgement">感谢</h2>
-
-感谢 [leafy7382][] 协助翻译，[hlb][]、[Randylien][] 帮忙润稿，[ethantw][] 的[汉字标准格式・CSS Reset][]， [WM][] 回报文字错误。
-
-[leafy7382]:https://twitter.com/#!/leafy7382
-[hlb]:http://iamhlb.com/
-[Randylien]:http://twitter.com/randylien
-[ethantw]:https://twitter.com/#!/ethantw
-[汉字标准格式・CSS Reset]:http://ethantw.net/projects/han/
-[WM]:http://kidwm.net/
-
-感谢 [fenprace][]，[addv][]。
-
-[fenprace]:https://github.com/fenprace
-[addv]:https://github.com/addv
-
-----------
-<h2 id="editor">Markdown 免费编辑器</h2>
-
-Windows 平台
-
-* [MarkdownPad](http://markdownpad.com/)
-* [MarkPad](http://code52.org/DownmarkerWPF/)
-
-Linux 平台
-
-* [ReText](http://sourceforge.net/p/retext/home/ReText/)
-
-Mac 平台
-
-* [Mou](http://mouapp.com/)
-
-在线编辑器
-
-* [Markable.in](http://markable.in/)
-* [Dillinger.io](http://dillinger.io/)
-
-浏览器插件
-
-* [MaDe](https://chrome.google.com/webstore/detail/oknndfeeopgpibecfjljjfanledpbkog) (Chrome)
-
-高级应用
-
-* [Sublime Text 2](http://www.sublimetext.com/2) + [MarkdownEditing](http://ttscoff.github.com/MarkdownEditing/) / [教程](http://lucifr.com/2012/07/12/markdownediting-for-sublime-text-2/)
-
-\*** 如有更好的 Markdown 免费编辑器推荐，请到[这里反馈](https://gitcafe.com/riku/Markdown-Syntax-CN/tickets/1)，谢谢！
