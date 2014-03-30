@@ -3,7 +3,7 @@ layout: post
 title: "Windows 7 + Cygwin 1.7 + NS2 2.35 安装手记"
 keywords: ["Win7", "Cygwin", "NS2"]
 description: "在 Windows 7 下 Cygwin 环境下安装 NS2 过程记录"
-category: "misc"
+category: "c++"
 tags: ["win7", "cygwin", "ns2"]
 ---
 {% include JB/setup %}
