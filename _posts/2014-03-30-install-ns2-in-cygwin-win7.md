@@ -24,7 +24,7 @@ PS: 伸手党请直接到文章最后下载打包的 Cygwin。
 
 到[ Cygwin 官网](http://www.cygwin.com/)下载最新的安装程序。即使你是 64 位的 win7，也建议选择 x86 版本，因为某些源中 64 位的软件包可能不太全。
 
-下载 setup-x86.exe 后运行，开始安装cygwin。选择软件源时，建议选择 ustc 的镜像（<http://mirrors.ustc.edu.cn/>），速度很不错，包也比较全。不要选择 163 的源，很多过时的包都没有。
+下载 setup-x86.exe 后运行，开始安装cygwin。选择软件源时，建议选择 ustc 的镜像（<http://mirrors.ustc.edu.cn/>），速度很不错，包也比较全。不要选择 163 的镜像，很多过时的包都没有。
 
 ![选择镜像]({{ IMAGE_PATH }}/cygwin-choose-mirror.png)
 
@@ -43,8 +43,6 @@ xorg-x11-etc  xorg-x11-fenc  xorg-x11-fnts  xorg-x11-libs-data  xorg-x11-xwin  l
 ```
 
 所有包都选中后，点击下一步、下一步开始安装。
-
-![安装中]({{ IMAGE_PATH }}/cygwin-installing.png)
 
 如果以后想安装其他软件包，重新运行 setup-x86.exe 就可以了。
 
@@ -69,7 +67,11 @@ cd ns-allinone-2.35
 ./install
 ```
 
-如果没有修改前面那处代码，安装过程中将会出现 `linkstate/ls.h:137:58: 错误：‘erase’ was not declared in this scope...`。
+如果没有修改前面那处代码，安装过程中将会出现如下错误：
+
+```
+linkstate/ls.h:137:58: 错误：‘erase’ was not declared in this scope...
+```
 
 安装完以后，遵照指示，将以下内容复制到 `~/.bashrc` 文件的末尾，设置环境变量：
 
@@ -88,13 +90,15 @@ cd ns-allinone-2.35/ns-2.35
 ./validate
 ```
 
-如果想验证 nam 是否可用，通过开始菜单 -> Cygwin-X 打开 Xwin Server，在弹出的窗口中执行以下命令：
+如果想验证 nam 是否可用，通过开始菜单 -> Cygwin-X -> XWin Server 打开 XWin Server，在弹出的窗口中执行以下命令：
 
 ```bash
 cd ns-allinone-2.35/ns-2.35/tcl/ex
 ns nam-example.tcl
 ```
 
-如果想在 Cygwin 命令窗口中执行，需要首先运行 Xwin Server，关掉窗口但不要退出，在 `~/.bashrc` 中加入 `export DISPLAY=:0.0`，然后打开 Cygwin 命令窗口，输入以上命令。
+![nam 示例]({{ IMAGE_PATH }}/nam-example.png)
+
+如果想在 Cygwin 命令窗口中执行，需要首先运行 XWin Server，关掉窗口但不要退出，在 `~/.bashrc` 中加入 `export DISPLAY=:0.0`，然后打开 Cygwin 命令窗口，输入以上命令。
 
 最后，附上包含 NS2 的完整的 Cygwin 包：<a href="http://pan.baidu.com/s/1pJud6GV" title="前往网盘下载" rel="nofollow"><button class="blue"><i class="icon-download-alt"></i> 百度网盘</button></a>
