@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Windows 7 + Cygwin 1.7 + NS2 2.35 安装手记"
+title: "Win 7 + Cygwin 1.7 + NS2 2.35 安装手记"
 keywords: ["Win7", "Cygwin", "NS2"]
 description: "在 Windows 7 下 Cygwin 环境下安装 NS2 过程记录"
 category: "c++"
@@ -52,7 +52,7 @@ xorg-x11-etc  xorg-x11-fenc  xorg-x11-fnts  xorg-x11-libs-data  xorg-x11-xwin  l
 
 到 sourceforge 上下载[ NS2 2.35 版本](http://sourceforge.net/projects/nsnam/files/allinone/ns-allinone-2.35/ns-allinone-2.35.tar.gz/download)，把下载的源码包放在 $HOME/ 目录下，双击桌面 Cygwin 图标，输入以下命令解压缩：
 
-```shell
+```bash
 tar xfzv ns-allinone-2.35.tar.gz
 ```
 
@@ -64,7 +64,7 @@ tar xfzv ns-allinone-2.35.tar.gz
 
 保存关闭后，继续使用以下命令安装 NS2:
 
-```shell
+```bash
 cd ns-allinone-2.35
 ./install
 ```
@@ -73,7 +73,7 @@ cd ns-allinone-2.35
 
 安装完以后，遵照指示，将以下内容复制到 `~/.bashrc` 文件的末尾，设置环境变量：
 
-```shell
+```bash
 export PATH="$PATH:$HOME/ns-allinone-2.35/bin:$HOME/ns-allinone-2.35/tcl8.5.10/unix:$HOME/ns-allinone-2.35/tk8.5.10/unix"
 export LD_LIBRARY_PATH="$HOME/ns-allinone-2.35/otcl-1.14, $HOME/ns-allinone-2.35/lib"
 export TCL_LIBRARY="$TCL_LIBRARY:$HOME/ns-allinone-2.35/tcl8.5.10/library"
@@ -83,18 +83,18 @@ export TCL_LIBRARY="$TCL_LIBRARY:$HOME/ns-allinone-2.35/tcl8.5.10/library"
 
 如果想验证 NS2 是否正确安装，在 Cygwin 命令窗口中执行以下命令: (相当耗时)
 
-```shell
+```bash
 cd ns-allinone-2.35/ns-2.35
 ./validate
 ```
 
 如果想验证 nam 是否可用，通过开始菜单 -> Cygwin-X 打开 Xwin Server，在弹出的窗口中执行以下命令：
 
-```shell
+```bash
 cd ns-allinone-2.35/ns-2.35/tcl/ex
 ns nam-example.tcl
 ```
 
 如果想在 Cygwin 命令窗口中执行，需要首先运行 Xwin Server，关掉窗口但不要退出，在 `~/.bashrc` 中加入 `export DISPLAY=:0.0`，然后打开 Cygwin 命令窗口，输入以上命令。
 
-最后，附上包含 NS2 的完整的 Cygwin 包：<a href="http://pan.baidu.com/" title="前往网盘下载" rel="nofollow"><button class="blue"><i class="icon-download-alt"></i> 百度网盘</button></a>
+最后，附上包含 NS2 的完整的 Cygwin 包：<a href="http://pan.baidu.com/s/1pJud6GV" title="前往网盘下载" rel="nofollow"><button class="blue"><i class="icon-download-alt"></i> 百度网盘</button></a>
