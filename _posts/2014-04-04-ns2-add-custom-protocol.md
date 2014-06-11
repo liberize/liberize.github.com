@@ -3,7 +3,7 @@ layout: post
 title: "NS2 添加自定义协议"
 keywords: ["NS2", "协议"]
 description: "在 NS2 中添加自定义协议的步骤"
-category: "c++"
+category: "tech"
 tags: ["ns2", "协议"]
 ---
 {% include JB/setup %}

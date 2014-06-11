@@ -3,7 +3,7 @@ layout: post
 title: "我的求职经历"
 keywords: ["校招", "工作", "面经"]
 description: "我一个月来的求职经历记录"
-category: "non-technical"
+category: "life"
 tags: ["工作"]
 ---
 {% include JB/setup %}

@@ -3,8 +3,8 @@ layout: post
 title: "Python 模块学习之 ConfigParser"
 keywords: ["Python", "ConfigParser"]
 description: "Python 模块学习之 ConfigParser"
-category: python
-tags: [python, module]
+category: "tech"
+tags: ["python", "module"]
 ---
 {% include JB/setup %}
 

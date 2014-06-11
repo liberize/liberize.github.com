@@ -3,7 +3,7 @@ layout: post
 title: "在 OS X 中创建并使用内存盘"
 keywords: ["Mac OS X", "内存盘"]
 description: "在 OS X 中创建并使用内存盘"
-category: "mac os x"
+category: "tech"
 tags: ["mac os x", "内存盘"]
 ---
 {% include JB/setup %}

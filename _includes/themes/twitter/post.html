@@ -18,7 +18,7 @@
       {% if page.license != false %}
       <footer>
         <p>
-          本作品由 <a href="mailto:{{ site.author.email }}" rel="nofollow">{{ site.author.name }}</a> 创作，采用
+          本作品由 <a href="mailto:{{ site.author.email }}">{{ site.author.name }}</a> 创作，采用
           <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="查看协议详细信息" target="_blank">CC BY-NC-SA 3.0 许可协议</a>
           进行许可。
         </p>
@@ -54,7 +54,7 @@
       {% else %}
       <li class="prev disabled"><a>&larr; 上一篇</a></li>
       {% endif %}
-      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}" rel="nofollow">文章列表</a></li>
+      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">文章列表</a></li>
       {% if page.next %}
       <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇 &rarr;</a></li>
       {% else %}

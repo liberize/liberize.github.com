@@ -3,8 +3,8 @@ layout: post
 title: "Shell 字符串分割"
 keywords: ["Shell", "字符串", "分割"]
 description: "Shell 字符串分割方法简介"
-category: shell
-tags: [shell]
+category: "tech"
+tags: ["shell"]
 ---
 {% include JB/setup %}
 

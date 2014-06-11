@@ -3,8 +3,8 @@ layout: post
 title: "Shell sudo 的若干问题"
 keywords: ["Shell", "sudo"]
 description: "Shell sudo 的若干问题"
-category: shell
-tags: [shell]
+category: "tech"
+tags: ["shell"]
 ---
 {% include JB/setup %}
 

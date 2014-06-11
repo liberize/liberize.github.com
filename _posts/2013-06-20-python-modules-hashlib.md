@@ -3,8 +3,8 @@ layout: post
 title: "Python 模块学习之 hashlib"
 keywords: ["Python", "hashlib"]
 description: "Python 模块学习之 hashlib"
-category: python
-tags: [python, module]
+category: "tech"
+tags: ["python", "module"]
 ---
 {% include JB/setup %}
 

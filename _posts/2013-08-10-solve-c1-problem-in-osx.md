@@ -3,7 +3,7 @@ layout: post
 title: "OS X 解决硬盘 C1 值激增问题"
 keywords: ["Mac OS X", "硬盘", "C1值", "LCC"]
 description: "OS X 解决硬盘 C1 值激增问题"
-category: "mac os x"
+category: "tech"
 tags: ["mac os x"]
 ---
 {% include JB/setup %}

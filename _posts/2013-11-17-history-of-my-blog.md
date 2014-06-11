@@ -3,7 +3,7 @@ layout: post
 title: "我的博客折腾史"
 keywords: ["博客"]
 description: "以流水账的形式记录我的博客折腾史"
-category: "non-technical"
+category: "life"
 tags: ["博客"]
 ---
 {% include JB/setup %}

@@ -3,7 +3,7 @@ layout: post
 title: "NS2 分裂对象模型"
 keywords: ["NS2"]
 description: "简单介绍 NS2 分裂对象模型"
-category: "c++"
+category: "tech"
 tags: ["ns2"]
 ---
 {% include JB/setup %}

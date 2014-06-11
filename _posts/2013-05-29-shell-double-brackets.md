@@ -3,8 +3,8 @@ layout: post
 title: "Shell 双括号运算符"
 keywords: ["Shell", "双括号"]
 description: "Shell 双括号运算符简介"
-category: shell
-tags: [shell]
+category: "tech"
+tags: ["shell"]
 ---
 {% include JB/setup %}
 

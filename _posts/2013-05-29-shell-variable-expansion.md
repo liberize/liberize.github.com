@@ -3,8 +3,8 @@ layout: post
 title: "Shell 变量扩展"
 keywords: ["Shell", "变量扩展"]
 description: "Shell 变量扩展简介"
-category: shell
-tags: [shell]
+category: "tech"
+tags: ["shell"]
 ---
 {% include JB/setup %}
 

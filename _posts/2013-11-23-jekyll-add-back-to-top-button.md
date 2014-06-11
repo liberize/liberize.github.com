@@ -3,7 +3,7 @@ layout: post
 title: "Jekyll 添加返回顶部按钮"
 keywords: ["Jekyll", "返回顶部"]
 description: "Jekyll 博客添加返回顶部按钮的方式"
-category: "web"
+category: "tech"
 tags: ["jekyll"]
 ---
 {% include JB/setup %}

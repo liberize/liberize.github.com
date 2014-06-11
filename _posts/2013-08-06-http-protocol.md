@@ -3,7 +3,7 @@ layout: post
 title: "HTTP 协议详解"
 keywords: ["HTTP"]
 description: "HTTP 协议详解"
-category: "web"
+category: "tech"
 tags: ["web", "http"]
 ---
 {% include JB/setup %}

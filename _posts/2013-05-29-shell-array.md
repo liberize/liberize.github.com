@@ -3,8 +3,8 @@ layout: post
 title: "Shell 数组"
 keywords: ["Shell", "数组"]
 description: "Shell 数组使用简介"
-category: shell
-tags: [shell]
+category: "tech"
+tags: ["shell"]
 ---
 {% include JB/setup %}
 

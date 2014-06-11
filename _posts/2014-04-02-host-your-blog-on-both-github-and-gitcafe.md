@@ -3,7 +3,7 @@ layout: post
 title: "同时使用 GitHub 和 GitCafe 托管博客"
 keywords: ["GitHub", "GitCafe", "博客"]
 description: "同时使用 GitHub 和 GitCafe 托管博客的一种方法"
-category: "web"
+category: "tech"
 tags: ["github", "gitcafe", "博客"]
 ---
 {% include JB/setup %}

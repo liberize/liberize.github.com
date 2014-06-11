@@ -3,7 +3,7 @@ layout: post
 title: "ANSI 控制码"
 keywords: ["ANSI", "控制码"]
 description: "ANSI 控制码简介"
-category: "misc"
+category: "tech"
 tags: ["控制码"]
 ---
 {% include JB/setup %}

@@ -3,7 +3,7 @@ layout: post
 title: "Jekyll 使用七牛云存储"
 keywords: ["Jekyll", "七牛", "CDN"]
 description: "Jekyll 博客使用七牛云存储的方法"
-category: "web"
+category: "tech"
 tags: ["jekyll", "cdn"]
 ---
 {% include JB/setup %}

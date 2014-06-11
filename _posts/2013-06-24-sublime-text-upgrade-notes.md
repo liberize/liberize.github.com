@@ -3,7 +3,7 @@ layout: post
 title: "Sublime Text 升级手记"
 keywords: ["Sublime Text", "升级"]
 description: "Sublime Text 由2到3的升级记录"
-category: "misc"
+category: "tech"
 tags: ["sublime text"]
 ---
 {% include JB/setup %}

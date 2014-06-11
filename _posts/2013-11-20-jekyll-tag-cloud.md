@@ -3,7 +3,7 @@ layout: post
 title: "Jekyll 不用 JS 生成标签云"
 keywords: ["Jekyll", "标签云"]
 description: "一种使用纯 Liquid 语法、不用 JavaScript 生成标签云的方法"
-category: "web"
+category: "tech"
 tags: ["jekyll", "标签云"]
 ---
 {% include JB/setup %}
@@ -52,7 +52,7 @@ tags: ["jekyll", "标签云"]
   {% else %}
     {% assign color = 8 | minus: base %}
   {% endif %}
-  <a href="{{ site.JB.tags_path }}#{{ tag[0] }}-ref" rel="nofollow" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+  <a href="{{ site.JB.tags_path }}#{{ tag[0] }}-ref" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
 {% endfor %}
 ```
 

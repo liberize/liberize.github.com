@@ -3,8 +3,8 @@ layout: post
 title: "Git 入门"
 keywords: ["Git"]
 description: "Git 入门简介"
-category: misc
-tags: [git]
+category: "tech"
+tags: ["git"]
 ---
 {% include JB/setup %}
 

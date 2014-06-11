@@ -3,8 +3,8 @@ layout: post
 title: "Shell 重定向标准错误流"
 keywords: ["Shell", "重定向", "标准错误"]
 description: "Shell 重定向标准错误流简介"
-category: shell
-tags: [shell]
+category: "tech"
+tags: ["shell"]
 ---
 {% include JB/setup %}
 

@@ -3,7 +3,7 @@ layout: post
 title: "黑苹果安装手记"
 keywords: ["黑苹果", "Acer 4738G"]
 description: "Acer 4738G 上安装黑苹果的记录"
-category: "mac os x"
+category: "tech"
 tags: ["黑苹果"]
 ---
 {% include JB/setup %}

@@ -3,7 +3,7 @@ layout: post
 title: "Jekyll 侧边栏滚动效果"
 keywords: ["jekyll", "侧边栏", "滚动", "固定"]
 description: "滚动到某个位置后保持侧边栏小工具固定的实现方法"
-category: "web"
+category: "tech"
 tags: ["jekyll", "特效"]
 ---
 {% include JB/setup %}

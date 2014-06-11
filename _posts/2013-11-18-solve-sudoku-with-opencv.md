@@ -3,7 +3,7 @@ layout: post
 title: "使用 OpenCV 解数独"
 keywords: ["OpenCV", "数独"]
 description: "使用 OpenCV 识别并解数独"
-category: "misc"
+category: "tech"
 tags: ["opencv", "数独"]
 ---
 {% include JB/setup %}

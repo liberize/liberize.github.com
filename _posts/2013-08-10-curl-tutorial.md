@@ -3,7 +3,7 @@ layout: post
 title: "cURL 使用指南"
 keywords: ["cURL", "网站开发"]
 description: "cURL 使用指南"
-category: "web"
+category: "tech"
 tags: ["web", "curl"]
 ---
 {% include JB/setup %}

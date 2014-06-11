@@ -2,6 +2,6 @@
 <span title="分类总数">{{ site.categories | size }}</span>
 <ul>
 {% for category in site.categories %}
-  <li><a href="{{ site.JB.categories_path }}#{{ category[0] }}-ref" rel="nofollow">{{ category[0] }} ({{ category[1] | size }})</a></li>
+  <li><a href="{{ site.JB.categories_path }}#{{ category[0] }}-ref">{{ category[0] }} ({{ category[1] | size }})</a></li>
 {% endfor %}
 </ul>

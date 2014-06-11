@@ -3,8 +3,8 @@ layout: post
 title: "Shell 生成序列"
 keywords: ["Shell", "序列"]
 description: "Shell 生成序列方法简介"
-category: shell
-tags: [shell]
+category: "tech"
+tags: ["shell"]
 ---
 {% include JB/setup %}
 

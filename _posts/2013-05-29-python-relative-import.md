@@ -3,8 +3,8 @@ layout: post
 title: "Python 相对导入"
 keywords: ["Python", "相对导入"]
 description: "Python 相对导入简介"
-category: python
-tags: [python]
+category: "tech"
+tags: ["python"]
 ---
 {% include JB/setup %}
 

@@ -3,8 +3,8 @@ layout: post
 title: "Git 分支管理策略"
 keywords: ["Git", "分支管理"]
 description: "Git 分支管理策略"
-category: misc
-tags: [git]
+category: "tech"
+tags: ["git"]
 ---
 {% include JB/setup %}
 
