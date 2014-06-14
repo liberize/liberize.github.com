@@ -27,7 +27,7 @@ ${goto 32}显存: ${font Ubuntu:style=Bold:size=8}${color1}${execi 4 aticonfig -
 ${goto 32}温度: ${font Ubuntu:style=Bold:size=8}${color1}${execi 4 aticonfig --odgt | grep "Temperature" | awk -F ' ' '{print $5}'}ºC${color}${font}${goto 145}负载: ${font Ubuntu:style=Bold:size=8}${color1}${execi 4 aticonfig --odgc | grep "GPU load" | awk -F ' ' '{print $4}'}${color}${font}
 ```
 
-天气部分利用 weather.com.cn 的 api 写了一个 Python 脚本，可以得到实时天气及未来几天的天气。用法为：`~/.conkycolors/bin/weather citycode sixdays/realtime`，如下所示。
+天气部分利用 weather.com.cn 的 api 写了一个 Python 脚本，可以得到实时天气及未来几天的天气。用法为：`"~/.conkycolors/bin/weather" citycode sixdays|realtime`，如下所示。
 
 ```
 ##################
