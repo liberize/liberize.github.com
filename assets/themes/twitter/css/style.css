@@ -145,12 +145,13 @@ a:hover, a:active { outline: none; }
 }
 #sidebar section ul li {
   list-style: none;
+  margin: 5px 0 5px;
   padding-left: 10px;
-  background: url(../img/bgs/bg_list_style.png) no-repeat 0 10px;
+  background: url(../img/bgs/bg_list_style.png) no-repeat 0 7px;
 }
 #sidebar section ul li a {
   padding: 3px 0 1px;
-  font-size: 85%;
+  font-size: 95%;
   text-shadow: none;
 }
 #sidebar section span {
@@ -202,7 +203,7 @@ article section h3 { font-size: 154%; }
 article section h4 { font-size: 131%; }
 article section h5 { font-size: 108%; }
 article section p {
-  font-size: 104%;
+  font-size: 115%;
   line-height: 160%;
   margin-bottom: .67em;
 }
@@ -241,6 +242,7 @@ article footer {
 
 .page header, .post header { height: 40px; }
 .post-extra {
+  font-size: 120%;
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -394,7 +396,7 @@ tbody tr:hover { background-color: #e5e5e5; }
 
 /*  Pre and Code  */
 code, pre {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family: monospace;
   font-size: inherit;
 }
 code {
