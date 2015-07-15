@@ -58,7 +58,7 @@ a {
   outline: none;
   text-decoration: none;
 }
-a:hover { color: #036; text-decoration: underline; }
+a:hover { text-decoration: underline; }
 a:hover, a:active { outline: none; }
 
 /*  General Classes  */
@@ -179,7 +179,6 @@ a:hover, a:active { outline: none; }
 }
 
 #content { margin-bottom: 35px; }
-#comments { overflow: hidden; }
 
 /*  Articles  */
 article {
@@ -193,6 +192,7 @@ article header {
 article header h1, article header h2 { float: left; }
 article header h1 { font-size: 213%; }
 article header h2 { font-size: 181%; }
+article header a:hover { color: #036; }
 article section { overflow: hidden; }
 article section h2, article section h3, article section h4, article section h5 { 
   margin-top: 1.0em;
@@ -244,7 +244,10 @@ article footer {
 .post-extra {
   font-size: 120%;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+.post-extra .pull-left span {
+  line-height: 25px;
 }
 
 /*  Buttons  */
@@ -397,10 +400,10 @@ tbody tr:hover { background-color: #e5e5e5; }
 /*  Pre and Code  */
 code, pre {
   font-family: monospace;
-  font-size: inherit;
+  font-size: 13px;
 }
 code {
-  padding: 0 3px;
+  padding: 1px 3px;
   margin: 0 2px;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
@@ -435,7 +438,6 @@ pre code {
 /* Pygments */
 .hll { background-color: #ffffcc; }
 .c { color: #408080; font-style: italic; }
-.err { border: 1px solid #FF0000; }
 .k { color: #008000; font-weight: bold; }
 .o { color: #666666; }
 .cm { color: #408080; font-style: italic; }
@@ -656,12 +658,6 @@ pre code {
 #fixed-container { width: 271px; }
 
 /*  DuoShuo  */
-#ds-thread {
-  clear: none !important;
-  float: left;
-  margin-top: 0;
-  width: 100%;
-}
 #ds-reset .ds-avatar img {
   width: 54px !important;
   height: 54px !important;

@@ -91,15 +91,4 @@ comments :
 }
 ```
 
-如果文章长度比较短，后面有大片空白，可能会出现多说评论框没有紧贴着文章末尾，而是显示在中间，不用担心，加入以下代码就解决了！
-
-```css
-#ds-thread {
-  clear: none !important;
-  float: left;
-  margin-top: 0;
-  width: 100%;
-}
-```
-
 {% endraw %}
