@@ -272,7 +272,7 @@ article footer {
 .button-link {
   color: #fff;
   background-color: #ae432e;
-  padding: 4px 6px;
+  padding: 4px 6px 2px;
   border: none;
   height: 16px;
   line-height: 100%;
@@ -658,9 +658,13 @@ pre code {
 #fixed-container { width: 271px; }
 
 /*  DuoShuo  */
+#ds-thread {
+  clear: none !important;
+  float: left;
+  margin-top: 0;
+  width: 100%;
+}
 #ds-reset .ds-avatar img {
-  width: 54px !important;
-  height: 54px !important;
   -webkit-border-radius: 27px !important;
   -moz-border-radius: 27px !important;
   border-radius: 27px !important;
