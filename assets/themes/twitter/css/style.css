@@ -360,6 +360,9 @@ button:disabled {
 /*  Image  */
 #logo img { border: none; }
 article img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   padding: 4px;
   background-color: #fff;
   border: 1px solid #b3b3b3;
