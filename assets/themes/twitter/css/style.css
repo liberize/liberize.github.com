@@ -40,7 +40,7 @@ body, select, input, textarea { color: #444; }
 body {
   background-image: url(../img/bgs/bg_body.png);
   font-family: Verdana, Arial, sans-serif, "Hiragino Sans GB", "Microsoft YaHei";
-  font-size: 13px;
+  font-size: 14px;
   *font-size: small;
   zoom: 1;
 }
@@ -145,13 +145,13 @@ a:hover, a:active { outline: none; }
 }
 #sidebar section ul li {
   list-style: none;
-  margin: 5px 0 5px;
+  margin: 4px 0 4px;
   padding-left: 10px;
   background: url(../img/bgs/bg_list_style.png) no-repeat 0 7px;
 }
 #sidebar section ul li a {
-  padding: 3px 0 1px;
-  font-size: 95%;
+  padding: 3px 0;
+  font-size: 86%;
   text-shadow: none;
 }
 #sidebar section span {
@@ -159,7 +159,7 @@ a:hover, a:active { outline: none; }
   display: block;
   position: relative;
   top: -27px;
-  padding: 3px 5px 1px;
+  padding: 2px 5px 2px;
   background-color: #d1d1d1;
   border: 1px solid #bfbfbf;
   margin-right: 20px;
@@ -190,20 +190,20 @@ article header {
   margin-bottom: 20px;
 }
 article header h1, article header h2 { float: left; }
-article header h1 { font-size: 213%; }
-article header h2 { font-size: 181%; }
+article header h1 { font-size: 198%; }
+article header h2 { font-size: 168%; }
 article header a:hover { color: #036; }
 article section { overflow: hidden; }
 article section h2, article section h3, article section h4, article section h5 { 
   margin-top: 1.0em;
   margin-bottom: .8em;
 }
-article section h2 { font-size: 181%; }
-article section h3 { font-size: 154%; }
-article section h4 { font-size: 131%; }
-article section h5 { font-size: 108%; }
+article section h2 { font-size: 168%; }
+article section h3 { font-size: 143%; }
+article section h4 { font-size: 122%; }
+article section h5 { font-size: 107%; }
 article section p {
-  font-size: 115%;
+  font-size: 107%;
   line-height: 160%;
   margin-bottom: .67em;
 }
@@ -242,7 +242,7 @@ article footer {
 
 .page header, .post header { height: 40px; }
 .post-extra {
-  font-size: 120%;
+  font-size: 115%;
   overflow: hidden;
   margin-bottom: 30px;
 }
@@ -272,10 +272,9 @@ article footer {
 .button-link {
   color: #fff;
   background-color: #ae432e;
-  padding: 4px 6px 2px;
+  padding: 3px 6px;
   border: none;
-  height: 16px;
-  line-height: 100%;
+  line-height: 16px;
 }
 .button-link:hover {
   color: #fff;
@@ -542,7 +541,6 @@ pre code {
 .pagination ul>li>a, .pagination ul>li>span {
   float: left;
   padding: 3px 12px;
-  height: 22px;
   line-height: 20px;
   text-decoration: none;
   background-color: #ffffff;
@@ -679,6 +677,12 @@ pre code {
 }
 #ds-reset .ds-powered-by {
   display: none;
+}
+#ds-reset {
+  font-size: 100% !important;
+}
+#ds-reset .ds-comment-body p {
+  font-size: 100% !important;
 }
 
 /*  Baidu Share  */
