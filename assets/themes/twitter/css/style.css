@@ -80,7 +80,11 @@ a:hover, a:active { outline: none; }
   float: left;
 }
 #top >a { float: left; }
-#navbar { float: right; }
+#logo { margin-top: 20px; }
+#navbar {
+  float: right;
+  margin-top: 40px;
+}
 #navbar ul { list-style: none; }
 #navbar ul li {
   font-weight: bold;
@@ -89,7 +93,6 @@ a:hover, a:active { outline: none; }
   text-align: center;
   padding-left: 12px;
   padding-right: 12px;
-  padding-top: 50px;
   position: relative;
 }
 #navbar ul li a {
@@ -120,7 +123,6 @@ a:hover, a:active { outline: none; }
 #sidebar {
   width: 271px;
   height: auto;
-  padding: 20px 0;
   float: left;
   font-size: 116%;
 }
@@ -501,7 +503,7 @@ pre code {
 
 /*  Search Box  */
 #search-box {
-  padding: 24px;
+  padding: 34px 24px;
   overflow: hidden;
   background: none !important;
 }
@@ -731,6 +733,8 @@ pre code {
 /*  Responsive UI  */
 @media (max-width: 999px) {
   #wrap { width: 100%; }
+  #logo { display: none; }
+  #navbar { margin-top: 0; }
   #sidebar { display: none; }
   #main { background: none; }
   #main-inner {

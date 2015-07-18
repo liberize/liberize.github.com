@@ -7,7 +7,8 @@
   <meta charset="UTF-8">
   <!--[if IE 8 ]><meta http-equiv="X-UA-Compatible" content="IE=7"><![endif]-->
 
-  <title>{{ page.title }}</title>
+  {% capture home_url %}{{ HOME_PATH | append: '/index.html' | replace: '//', '/' }}{% endcapture %}
+  <title>{{ page.title }}{% if page.url != home_url %} - {{ site.title }}{% endif %}</title>
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords | join: "," }}">{% endif %}
   {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
   <meta name="author" content="{{ site.author.name }}">
@@ -40,7 +41,6 @@
       <!-- Navigation Bar -->
       <nav id="navbar">
         <ul>
-          {% capture home_url %}{{ HOME_PATH | append: '/index.html' | replace: '//', '/' }}{% endcapture %}
           <li{% if page.url == home_url %} class="active"{% endif %}>
             <a href="{{ HOME_PATH }}" title="首页">首页</a>
           </li>
