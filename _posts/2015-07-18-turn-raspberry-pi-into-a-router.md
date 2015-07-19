@@ -306,6 +306,8 @@ fi
 
 如果 `ipdown`、`ifup` 有问题，过一会儿再依次执行 `ipdown`、`ifup`，或者直接重启。
 
+如果想继续给树莓派加上过滤网页和视频广告、科学上网等功能请阅读[下篇](/tech/raspberry-pi-ad-block.html)。
+
 参考：
 
 * <http://elinux.org/RPI-Wireless-Hotspot>
