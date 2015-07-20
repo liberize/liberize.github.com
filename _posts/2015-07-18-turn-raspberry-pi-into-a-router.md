@@ -239,9 +239,10 @@ esac
 exit 0
 ```
 
-然后，开机自动执行以上脚本：
+然后，增加可执行权限，并设置开机自动执行：
 
 ```
+sudo chmod +x /etc/init.d/iptables
 sudo update-rc.d iptables defaults
 ```
 

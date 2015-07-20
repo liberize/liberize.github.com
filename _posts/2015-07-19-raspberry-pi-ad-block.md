@@ -178,7 +178,23 @@ sudo service privoxy restart
 
 这里我只用了 EasyListChina，因为浏览国外网站比较少，而 EasyList 体积很大，担心影响速度。可以在括号内加入其他订阅地址，空格分隔。
 
-最后在 crontab 加上定时任务，每周更新一次。
+可以在 crontab 加上定时任务，每周更新一次。
+
+最后，添加 iptables 规则，将 80 端口的请求转发给 privoxy 监听的 8118 端口。参考[上篇文章](/tech/turn-raspberry-pi-into-a-router.html) ，通过启动脚本的方式自动配置 iptables 规则。
+
+在 `do_start` 函数中加上：
+
+```
+# privoxy rules
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8118
+```
+
+在 `do_stop` 函数中加上：
+
+```
+# privoxy rules
+iptables -t nat -D PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8118
+```
 
 ## 三、去视频广告
 
