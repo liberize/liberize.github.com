@@ -218,7 +218,7 @@ actionsfile `/etc/privoxy/shadowsocks.action` 内容仿照以下格式：
 
 同样地，这里只加了 google 的一些网站，其他的自己添加吧，一目了然。
 
-最后，别忘了添加 iptables 规则，同样参考[上篇文章](/tech/raspberry-pi-ad-block.html#二、去网页广告，privoxy-adblock-plus-规则)。
+最后，别忘了添加 iptables 规则，同样参考[上篇文章](/tech/raspberry-pi-ad-block.html#二、去网页广告，privoxy-+-adblock-plus-规则)。
 
 这种方法的优点自然是简单，缺点是受 privoxy 限制，只支持 http 和 https。
 
