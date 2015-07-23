@@ -15,7 +15,7 @@ tags: ["树莓派"]
 目前暂且拟定如下计划，其中大部分已经实现，带链接的是已经记录下来的：
 
 * 入门篇：
-    * 使用 ssh 和 vnc 访问树莓派
+    * [使用 ssh 和 vnc 访问树莓派](/tech/access-raspberry-pi-via-ssh-and-vnc.html)
 * 路由器篇：
     * [将树莓派打造成无线路由器](/tech/turn-raspberry-pi-into-a-router.html)（hostapd + udhcpd + iptables）
     * [使用树莓派屏蔽网页和视频广告](/tech/raspberry-pi-ad-block.html)（dnsmasq + hosts, privoxy + adblock plus, privoxy + ocplayer）
