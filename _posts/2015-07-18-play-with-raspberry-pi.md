@@ -21,7 +21,7 @@ tags: ["树莓派"]
     * [使用树莓派屏蔽网页和视频广告](/tech/raspberry-pi-ad-block.html)（dnsmasq + hosts, privoxy + adblock plus, privoxy + ocplayer）
     * [使用树莓派搭建透明代理，实现科学上网](/tech/raspberry-pi-transparent-proxy.html)（ss-redir + chinadns + iptables, ss-local + privoxy）
 * NAS 篇：
-    * 将树莓派打造成多功能下载机（aria2 + transmission + xware）
+    * [将树莓派打造成多功能下载机](/tech/turn-raspberry-pi-into-a-downloader.html)（aria2 + transmission + xware）
     * 访问树莓派的媒体资源（minidlna + bubbleupnp + samba）
     * 将树莓派打造成电视盒子（kodi + shairport）
 * 硬件篇：
