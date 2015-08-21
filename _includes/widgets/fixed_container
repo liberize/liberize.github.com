@@ -19,13 +19,5 @@ $(document).ready(function() {
       $('#fixed-container').css('position','static');
     }
   });
-  if(matchMedia) {
-    var mq = matchMedia('(max-width: 999px)');
-    mq.addListener(function(mql) {
-      if (!mql.matches) {
-        position = $('#fixed-container').offset();
-      }
-    });
-  }
 });
 </script>
