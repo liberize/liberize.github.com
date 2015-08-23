@@ -4,8 +4,7 @@ theme :
   name : twitter
 ---
 {% include JB/setup %}
-{% capture HTC_PATH %}{{ BASE_PATH }}/assets/themes/{{ page.theme.name }}/css{% endcapture %}
-{% capture PIE_LOAD_PATH %}{{ ASSET_PATH }}/js{% endcapture %}
+{% capture ASSET_DIR %}/assets/themes/{{ page.theme.name }}{% endcapture %}
 
 /*  HTML5 Boilerplate  */
 
@@ -35,7 +34,7 @@ table { border-collapse: collapse; border-spacing: 0; margin-bottom: 15px; }
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 input, select { vertical-align: middle; }
 kbd, samp { font-family: monospace, sans-serif; }
-html { overflow-y: scroll; -pie-load-path: "{{ PIE_LOAD_PATH }}"; }
+html { overflow-y: scroll; -pie-load-path: "{{ ASSET_PATH }}/js"; }
 nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
 small { font-size: 85%; }
 td { vertical-align: top; }
@@ -130,7 +129,8 @@ a:hover, a:active { outline: none; }
   -webkit-border-radius: 3px;
   border-radius: 3px;
   background: #e6e6e6 url(../img/bgs/bg_main.png) repeat-y 263px 0;
-  behavior: url({{ HTC_PATH }}/PIE.htc);
+  -pie-background: #e6e6e6 url({{ ASSET_DIR }}/img/bgs/bg_main.png) repeat-y 263px 0;
+  behavior: url({{ ASSET_DIR }}/css/PIE.htc);
 }
 
 #sidebar {
@@ -184,7 +184,7 @@ a:hover, a:active { outline: none; }
   -moz-border-radius: 3px;
   border-radius: 3px;
   cursor: pointer;
-  behavior: url({{ HTC_PATH }}/PIE.htc);
+  behavior: url({{ ASSET_DIR }}/css/PIE.htc);
 }
 
 #main-inner {
@@ -245,7 +245,7 @@ article footer {
   -moz-box-shadow: inset 0px 0px 3px #ababab;
   box-shadow: inset 0px 0px 3px #ababab;
   -pie-box-shadow: none;
-  behavior: url({{ HTC_PATH }}/PIE.htc);
+  behavior: url({{ ASSET_DIR }}/css/PIE.htc);
 }
 .ie7 .nested, .ie8 .nested { border: 1px solid #bfbfbf; }
 .nested header {
@@ -287,7 +287,7 @@ article footer {
   transition: all 400ms ease;
   overflow: visible;
   width: auto;
-  behavior: url({{ HTC_PATH }}/PIE.htc);
+  behavior: url({{ ASSET_DIR }}/css/PIE.htc);
 }
 
 .button-link {
@@ -406,7 +406,7 @@ input {
   -moz-box-shadow: 0 0 4px #d9d9d9 inset;
   box-shadow: 0 0 4px #d9d9d9 inset;
   -pie-box-shadow: none;
-  behavior: url({{ HTC_PATH }}/PIE.htc);
+  behavior: url({{ ASSET_DIR }}/css/PIE.htc);
 }
 input:focus {
   background-color: #ededed;
@@ -433,7 +433,7 @@ code, pre {
   position: relative;
   font-family: "Courier New", Consolas, monospace;
   font-size: 13px;
-  behavior: url({{ HTC_PATH }}/PIE.htc);
+  behavior: url({{ ASSET_DIR }}/css/PIE.htc);
 }
 code {
   padding: 1px 3px;
@@ -577,7 +577,7 @@ pre code {
   -webkit-box-shadow: 0 1px 2px #f2f2f2;
   -moz-box-shadow: 0 1px 2px #f2f2f2;
   box-shadow: 0 1px 2px #f2f2f2;
-  behavior: url({{ HTC_PATH }}/PIE.htc);
+  behavior: url({{ ASSET_DIR }}/css/PIE.htc);
 }
 .pagination ul>li { display: inline; }
 .pagination ul>li>a, .pagination ul>li>span {
@@ -664,7 +664,7 @@ pre code {
   border-radius: 3px;
   text-decoration: none;
   border: 1px dashed #cccccc;
-  behavior: url({{ HTC_PATH }}/PIE.htc);
+  behavior: url({{ ASSET_DIR }}/css/PIE.htc);
 }
 .tag-box a span { vertical-align: super; font-size: .8em; }
 .tag-box a:hover { background-color: #e5e5e5; }
@@ -711,7 +711,7 @@ pre code {
 }
 #ds-reset li.ds-tab a, #ds-reset .ds-rounded, #ds-reset #ds-bubble {
   position: relative;
-  behavior: url({{ HTC_PATH }}/PIE.htc);
+  behavior: url({{ ASSET_DIR }}/css/PIE.htc);
 }
 #ds-reset .ds-avatar img {
   position: relative;
@@ -721,7 +721,7 @@ pre code {
   -webkit-transition: -webkit-transform 0.4s ease-out;
   -moz-transition: -moz-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
-  behavior: url({{ HTC_PATH }}/PIE.htc);
+  behavior: url({{ ASSET_DIR }}/css/PIE.htc);
 }
 #ds-reset .ds-avatar img:hover {
   -webkit-transform: rotateZ(360deg);
@@ -757,13 +757,14 @@ pre code {
   height: 54px;
   display: block;
   background: #aaa url(../img/bgs/bg_up_arrow.png) no-repeat center center;
+  -pie-background: #aaa url({{ ASSET_DIR }}/img/bgs/bg_up_arrow.png) no-repeat center center;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
   -webkit-transition: 1s;
   -moz-transition: 1s;
   transition: 1s;
-  behavior: url({{ HTC_PATH }}/PIE.htc);
+  behavior: url({{ ASSET_DIR }}/css/PIE.htc);
 }
 #back-top a:hover {
   background-color: #777;
