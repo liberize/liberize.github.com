@@ -129,7 +129,7 @@ a:hover, a:active { outline: none; }
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #e6e6e6 url(../img/bgs/bg_main.png) repeat-y 263px 0;
+  background: #e6e6e6 url({{ ASSET_PATH }}/img/bgs/bg_main.png) repeat-y 263px 0;
   behavior: url({{ HTC_PATH }}/PIE.htc);
 }
 
@@ -756,7 +756,7 @@ pre code {
   width: 54px;
   height: 54px;
   display: block;
-  background: #ddd url(../img/bgs/bg_up_arrow.png) no-repeat center center;
+  background: #ddd url({{ ASSET_PATH }}/img/bgs/bg_up_arrow.png) no-repeat center center;
   background-color: #aaa;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
