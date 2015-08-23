@@ -1,1 +1,3 @@
-Sitemap: http://liberize.me/sitemap.txt
+---
+---
+Sitemap: {{ site.production_url }}/sitemap.txt

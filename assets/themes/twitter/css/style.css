@@ -1,3 +1,12 @@
+---
+layout: null
+theme :
+  name : twitter
+---
+{% include JB/setup %}
+{% capture HTC_PATH %}{{ BASE_PATH }}/assets/themes/{{ page.theme.name }}/css{% endcapture %}
+{% capture PIE_LOAD_PATH %}{{ ASSET_PATH }}/js{% endcapture %}
+
 /*  HTML5 Boilerplate  */
 
 html, body, div, span, object, iframe,
@@ -26,7 +35,7 @@ table { border-collapse: collapse; border-spacing: 0; margin-bottom: 15px; }
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 input, select { vertical-align: middle; }
 kbd, samp { font-family: monospace, sans-serif; }
-html { overflow-y: scroll; }
+html { overflow-y: scroll; -pie-load-path: "{{ PIE_LOAD_PATH }}"; }
 nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
 small { font-size: 85%; }
 td { vertical-align: top; }
@@ -105,6 +114,9 @@ a:hover, a:active { outline: none; }
   text-decoration: none;
   border-bottom: 4px solid #ae432e;
 }
+.ie7 #navbar ul li a {
+  display: block;
+}
 
 #main {
   width: 100%;
@@ -118,6 +130,7 @@ a:hover, a:active { outline: none; }
   -webkit-border-radius: 3px;
   border-radius: 3px;
   background: #e6e6e6 url(../img/bgs/bg_main.png) repeat-y 263px 0;
+  behavior: url({{ HTC_PATH }}/PIE.htc);
 }
 
 #sidebar {
@@ -171,6 +184,7 @@ a:hover, a:active { outline: none; }
   -moz-border-radius: 3px;
   border-radius: 3px;
   cursor: pointer;
+  behavior: url({{ HTC_PATH }}/PIE.htc);
 }
 
 #main-inner {
@@ -219,6 +233,7 @@ article footer {
 }
 
 .nested {
+  position: relative;
   border: 1px solid #bfbfbf inset;
   background-color: #f0f0f0;
   padding: 20px;
@@ -229,6 +244,8 @@ article footer {
   -webkit-box-shadow: inset 0px 0px 3px #ababab;
   -moz-box-shadow: inset 0px 0px 3px #ababab;
   box-shadow: inset 0px 0px 3px #ababab;
+  -pie-box-shadow: none;
+  behavior: url({{ HTC_PATH }}/PIE.htc);
 }
 .ie7 .nested, .ie8 .nested { border: 1px solid #bfbfbf; }
 .nested header {
@@ -254,6 +271,7 @@ article footer {
 
 /*  Buttons  */
 .button-link, button {
+  position: relative;
   display: inline-block;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -269,6 +287,7 @@ article footer {
   transition: all 400ms ease;
   overflow: visible;
   width: auto;
+  behavior: url({{ HTC_PATH }}/PIE.htc);
 }
 
 .button-link {
@@ -295,6 +314,7 @@ button {
   background: -o-linear-gradient(top, #faa796, #d06c57 5%, #ae432e 100%);
   background: -ms-linear-gradient(top, #faa796, #d06c57 5%, #ae432e 100%);
   background: linear-gradient(to bottom, #faa796, #d06c57 5%, #ae432e 100%);
+  -pie-background: linear-gradient(#d06c57, #ae432e);
   padding: 4px 15px;
   -webkit-box-shadow: 0 1px 2px #999;
   -moz-box-shadow: 0 1px 2px #999;
@@ -310,6 +330,7 @@ button:hover {
   background: -o-linear-gradient(top, #faa796, #d06c57 5%, #943a28 100%);
   background: -ms-linear-gradient(top, #faa796, #d06c57 5%, #943a28 100%);
   background: linear-gradient(to bottom, #faa796, #d06c57 5%, #943a28 100%);
+  -pie-background: linear-gradient(#d06c57, #943a28);
   color: #fff;
 }
 button.blue { 
@@ -320,6 +341,7 @@ button.blue {
   background: -o-linear-gradient(top, #afe3fa, #6cb8d9 5%, #088ec8 100%);
   background: -ms-linear-gradient(top, #afe3fa, #6cb8d9 5%, #088ec8 100%);
   background: linear-gradient(to bottom, #afe3fa, #6cb8d9 5%, #088ec8 100%);
+  -pie-background: linear-gradient(#6cb8d9, #088ec8);
   color: #ebf9ff;
 }
 button.blue:hover {
@@ -329,6 +351,7 @@ button.blue:hover {
   background: -o-linear-gradient(top, #afe3fa, #6cb8d9 5%, #077bad 100%);
   background: -ms-linear-gradient(top, #afe3fa, #6cb8d9 5%, #077bad 100%);
   background: linear-gradient(to bottom, #afe3fa, #6cb8d9 5%, #077bad 100%);
+  -pie-background: linear-gradient(#6cb8d9, #077bad);
   color: #fff;
 }
 button.green { 
@@ -339,6 +362,7 @@ button.green {
   background: -o-linear-gradient(top, #d7fa96, #abd957 5%, #78ac15 100%);
   background: -ms-linear-gradient(top, #d7fa96, #abd957 5%, #78ac15 100%);
   background: linear-gradient(to bottom, #d7fa96, #abd957 5%, #78ac15 100%);
+  -pie-background: linear-gradient(#abd957, #78ac15);
   color: #f7ffe5;
 }
 button.green:hover {
@@ -348,6 +372,7 @@ button.green:hover {
   background: -o-linear-gradient(top, #d7fa96, #abd957 5%, #659111 100%);
   background: -ms-linear-gradient(top, #d7fa96, #abd957 5%, #659111 100%);
   background: linear-gradient(to bottom, #d7fa96, #abd957 5%, #659111 100%);
+  -pie-background: linear-gradient(#abd957, #659111);
   color: #fff;
 }
 button:disabled {
@@ -380,6 +405,8 @@ input {
   -webkit-box-shadow: 0 0 4px #d9d9d9 inset;
   -moz-box-shadow: 0 0 4px #d9d9d9 inset;
   box-shadow: 0 0 4px #d9d9d9 inset;
+  -pie-box-shadow: none;
+  behavior: url({{ HTC_PATH }}/PIE.htc);
 }
 input:focus {
   background-color: #ededed;
@@ -403,8 +430,10 @@ tbody tr:hover { background-color: #e5e5e5; }
 
 /*  Pre and Code  */
 code, pre {
-  font-family: Courier, monospace;
+  position: relative;
+  font-family: "Courier New", Consolas, monospace;
   font-size: 13px;
+  behavior: url({{ HTC_PATH }}/PIE.htc);
 }
 code {
   padding: 1px 3px;
@@ -423,9 +452,10 @@ pre {
   line-height: 20px;
   word-break: break-all;
   word-wrap: break-word;
+  -ms-word-wrap: break-word;
   white-space: pre-wrap;
   background-color: #f5f5f5;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid #d1d1d1;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -437,6 +467,9 @@ pre code {
   white-space: pre-wrap;
   background-color: transparent;
   border: 0;
+}
+.ie7 pre, .ie7 pre code {
+  white-space: pre;
 }
 
 /* Pygments */
@@ -514,6 +547,7 @@ pre code {
 #query {
   margin-bottom: 0;
   padding: 4px 14px;
+  font-family: inherit;
   font-size: 13px;
   font-weight: normal;
   line-height: 100%;
@@ -530,6 +564,7 @@ pre code {
 /*  Pagination  */
 .pagination { margin: 20px 0; }
 .pagination ul {
+  position: relative;
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -538,9 +573,11 @@ pre code {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -pie-border-radius: none;
+  -webkit-box-shadow: 0 1px 2px #f2f2f2;
+  -moz-box-shadow: 0 1px 2px #f2f2f2;
+  box-shadow: 0 1px 2px #f2f2f2;
+  behavior: url({{ HTC_PATH }}/PIE.htc);
 }
 .pagination ul>li { display: inline; }
 .pagination ul>li>a, .pagination ul>li>span {
@@ -617,13 +654,17 @@ pre code {
 /*  Tag Box  */
 .tag-box li i { opacity: .9; }
 .tag-box a {
+  position: relative;
   padding: 4px 6px;
   margin: 2px;
   background: #eee;
   color: #555;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   border-radius: 3px;
   text-decoration: none;
   border: 1px dashed #cccccc;
+  behavior: url({{ HTC_PATH }}/PIE.htc);
 }
 .tag-box a span { vertical-align: super; font-size: .8em; }
 .tag-box a:hover { background-color: #e5e5e5; }
@@ -667,13 +708,19 @@ pre code {
   margin-top: 0;
   width: 100%;
 }
+#ds-reset li.ds-tab a, #ds-reset .ds-rounded, #ds-reset #ds-bubble {
+  position: relative;
+  behavior: url({{ HTC_PATH }}/PIE.htc);
+}
 #ds-reset .ds-avatar img {
+  position: relative;
   -webkit-border-radius: 27px !important;
   -moz-border-radius: 27px !important;
   border-radius: 27px !important;
   -webkit-transition: -webkit-transform 0.4s ease-out;
   -moz-transition: -moz-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
+  behavior: url({{ HTC_PATH }}/PIE.htc);
 }
 #ds-reset .ds-avatar img:hover {
   -webkit-transform: rotateZ(360deg);
@@ -716,6 +763,7 @@ pre code {
   -webkit-transition: 1s;
   -moz-transition: 1s;
   transition: 1s;
+  behavior: url({{ HTC_PATH }}/PIE.htc);
 }
 #back-top a:hover {
   background-color: #777;

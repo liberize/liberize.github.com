@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--[if IE 7 ]>    <html lang="zh-CN" class="ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="zh-CN"> <!--<![endif]-->
+<!--[if IE 9 ]>    <html lang="zh-CN" class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--> <html lang="zh-CN"> <!--<![endif]-->
 
 <head>
   <meta charset="UTF-8">
-  <!--[if IE 8 ]><meta http-equiv="X-UA-Compatible" content="IE=7"><![endif]-->
 
   {% capture home_url %}{{ HOME_PATH | append: '/index.html' | replace: '//', '/' }}{% endcapture %}
   <title>{{ page.title }}{% if page.url != home_url %} - {{ site.title }}{% endif %}</title>
@@ -23,7 +23,8 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{ ASSET_PATH }}/css/style.css">
-  <link rel="stylesheet" href="{{ ASSET_PATH }}/css/font-awesome.min.css">
+  <!--[if IE 7 ]><link rel="stylesheet" href="{{ ASSET_PATH }}/css/font-awesome-ie7.min.css"><![endif]-->
+  <!--[if (gte IE 8)|!(IE)]><!--><link rel="stylesheet" href="{{ ASSET_PATH }}/css/font-awesome.min.css"><!--<![endif]-->
 
   <!-- Scripts -->
   <script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery-1.10.1.min.js"></script>
@@ -105,7 +106,12 @@
     </footer>
   </div>
 
-  <script type="text/javascript">$('article.post a').attr('target', '_blank');</script>
+  <script type="text/javascript">
+    $('article.post a').attr('target', '_blank');
+    if (navigator.appVersion.indexOf("Mac") != -1) {
+      $('code, pre').css('font-family', 'Courier, monospace');
+    }
+  </script>
   {% include JB/analytics %}
   
 </body>
