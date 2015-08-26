@@ -37,7 +37,7 @@ GitCafe 上在“项目管理”中找到“自定义域名”，添加要绑定
 
 ## 二、实现同步提交
 
-因为 GitHub 和 GitCafe 的 Pages 使用不同的分支，所以无法使用下面这种方式：
+因为 GitHub 和 GitCafe 的 Pages 使用不同的分支，所以无法在 remote 里添加两个 url：
 
 ```ini
 [remote "all"]
