@@ -18,10 +18,14 @@ tags: ["博客"]
 * 操作系统方面，Mac 表现最好，因为我就是在 Mac 下调的，Windows 次之，Linux 未测试。
 * 设备适配方面，我一般用电脑访问，只做了简单的响应式布局，所以手机端体验一般。
 
-喜欢这套主题的同学直接 fork 我的 [github repo](http://github.com/liberize/liberize.github.com) 就可以了，但是**请记得把我的个人信息去掉**，具体包括：
+喜欢这套主题的同学<del>直接 fork 我的 [github repo](http://github.com/liberize/liberize.github.com) 就可以了</del>，但是**请记得把我的个人信息去掉**，具体包括：
 
 * `_post/` 里面的所有文章。
 * `_config.yml` 里面的设置，包括作者信息、url、多说、百度统计等。
 * `_includes/widgets` 里面的一些链接，包括联系方式、代码仓库、友情链接等。
 
 如果可以，希望大家能在首页留下一个指向我的博客的链接，谢谢。
+
+UPDATE:
+
+鉴于很多人 fork 了 repo 之后没有做任何修改，对我的博客有很多不良影响，本博客停止开源，github repo 已改为 private，真心需要的请邮件联系我，附上你的 github 链接。
