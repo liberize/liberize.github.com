@@ -4,7 +4,7 @@ title: "Jekyll 使用多说评论系统"
 keywords: ["Jekyll", "多说", "评论系统"]
 description: "Jekyll 博客使用多说评论系统的方法"
 category: "tech"
-tags: ["jekyll", "评论"]
+tags: ["jekyll", "多说", "评论"]
 ---
 {% include JB/setup %}
 {% raw %}
