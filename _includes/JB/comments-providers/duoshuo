@@ -1,4 +1,4 @@
-{% if duoshuo != 'jsonly' %}
+{% if include.type == 'comment' %}
 <div id="ds-thread" class="ds-thread" data-url="{{ site.production_url }}{{ page.url }}" data-title="{{ page.title }}" data-thread-key="{{ page.title }}" data-author-key="{{ site.author.name }}"></div>
 <div style="clear: both;"></div>
 {% endif %}

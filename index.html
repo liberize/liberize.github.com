@@ -27,7 +27,8 @@ description: "一个程序员的技术博客，分享折腾的点点滴滴"
         发表日期：<a href="{{ site.JB.archive_path }}#{{ post.date | date: '%B-%Y' }}" title="查看此月所有文章">{{ post.date | date: "%d %B %Y" }}</a>，
         作者：<a href="mailto:{{ site.author.email }}" title="向作者发送邮件">{{ site.author.name }}</a>，
         类别：<a href="{{ site.JB.categories_path }}#{{ post.category }}-ref" title="查看此类别下的所有文章">{{ post.category }}</a>{% if site.JB.comments.provider == 'duoshuo' %}，
-        评论：<a href="{{ post.url }}#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="{{ post.title }}" data-count-type="comments"></span></a>{% endif %}
+        评论：<a href="{{ post.url }}#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="{{ post.title }}" data-count-type="comments"></span></a>{% elsif site.JB.comments.provider == 'disqus' %}，
+        评论：<a href="{{ post.url }}#disqus_thread" title="查看此文章的评论"></a>{% endif %}
       </p>
     </footer>
 
@@ -35,8 +36,9 @@ description: "一个程序员的技术博客，分享折腾的点点滴滴"
   {% endfor %}
 
   {% if site.JB.comments.provider == 'duoshuo' %}
-    {% assign duoshuo = 'jsonly' %}
-    {% include JB/comments-providers/duoshuo %}
+    {% include JB/comments-providers/duoshuo type='count' %}
+  {% elsif site.JB.comments.provider == 'disqus' %}
+    {% include JB/comments-providers/disqus type='count' %}
   {% endif %}
 
 </section>
