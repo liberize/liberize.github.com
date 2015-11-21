@@ -22,7 +22,7 @@ tags: ["树莓派"]
     * [使用树莓派搭建透明代理，实现科学上网](/tech/raspberry-pi-transparent-proxy.html)（ss-redir + chinadns + iptables, ss-local + privoxy）
 * NAS 篇：
     * [将树莓派打造成多功能下载机](/tech/turn-raspberry-pi-into-a-downloader.html)（aria2 + transmission + xware）
-    * 访问树莓派的媒体资源（minidlna + bubbleupnp + samba）
+    * [访问树莓派的媒体资源](/tech/access-media-resource-on-raspberry-pi.html)（minidlna + bubbleupnp + samba）
     * 将树莓派打造成电视盒子（kodi + shairport）
 * 硬件篇：
     * 给树莓派加上液晶显示、温度监控和红外遥控（1602 液晶 + ds18b20 温度传感器 + 红外接收头）
