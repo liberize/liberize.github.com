@@ -49,7 +49,7 @@ sudo service samba restart
 
 DLNA 是一种比较常见、广泛支持的数字媒体设备之间互联互通的解决方案。MiniDLNA 是一个支持 DLNA/UPnP 协议的轻量级的服务端软件。
 
-DLNA 目前还有一些缺点，比如不支持外挂字幕，不支持 rmvb 格式等。如果使用 BubbleUPnP + MX Player，可以在 MX Player 中加载本地字幕。如果想支持 rmvb 格式，请下载源码，自己打补丁，参考[这篇文章](http://blog.csdn.net/Haven200/article/details/43039261)。
+DLNA 目前还有一些缺点，比如不支持外挂字幕，不支持 rmvb 格式等，这些基本都是可以解决的。字幕问题，如果使用 BubbleUPnP + MX Player，可以在 MX Player 中加载本地字幕。rmvb 格式问题，可以下载源码，自己打补丁，参考[这篇文章](http://blog.csdn.net/Haven200/article/details/43039261)。
 
 安装 MiniDLNA：
 
@@ -67,7 +67,7 @@ inotify=yes
 friendly_name=Raspberry Pi Media Server
 ```
 
-其中，`A,`,`P,`,`V,` 后面分别是音频、图片、视频目录，`friendly_name` 是显示的名称。
+其中，`A,` `P,` `V,` 后面分别是音频、图片、视频目录，`inotify` 表示是否自动发现新文件，`friendly_name` 是显示的名称。
 
 然后重启 MiniDLNA 服务：
 
@@ -75,7 +75,7 @@ friendly_name=Raspberry Pi Media Server
 sudo service minidlna restart
 ```
 
-浏览器访问树莓派 8200 可以看到当前媒体文件数目。
+浏览器访问树莓派 8200 端口可以看到当前媒体文件数目。
 
 如果加入新文件后没有自动识别，执行 `sudo minidlnad -R` 刷新数据库。
 
