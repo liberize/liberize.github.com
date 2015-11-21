@@ -1,18 +1,21 @@
-<a href="#"><i class="icon-fixed-width icon-heart"></i> 与我联系</a>
+<a href="#"><i class="icon-heart"></i> 与我联系</a>
 <div id="contacts-list">
-  <a href="mailto:liberize@gmail.com" target="_blank" title="Gmail">
-    <i class="icon-large icon-fixed-width icon-envelope"></i>
+  <a href="mailto:{{ site.author.email }}" target="_blank" title="Gmail">
+    <i class="icon-mail-alt"></i>
   </a>
-  <a href="https://github.com/liberize" target="_blank" title="Github">
-    <i class="icon-large icon-fixed-width icon-github"></i>
+  <a href="https://github.com/{{ site.author.github }}" target="_blank" title="GitHub">
+    <i class="icon-github-circled"></i>
   </a>
-  <a href="http://weibo.com/liberize" target="_blank" title="新浪微博">
-    <i class="icon-large icon-fixed-width icon-weibo"></i>
+  <a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="新浪微博">
+    <i class="icon-weibo"></i>
   </a>
-  <a href="https://plus.google.com/118314345733357791088/" target="_blank" title="Google+">
-    <i class="icon-large icon-fixed-width icon-google-plus"></i>
+  <a href="http://v2ex.com/member/{{ site.author.v2ex }}" target="_blank" title="V2EX">
+    <i class="icon-v2ex"></i>
   </a>
-  <a href="https://twitter.com/liberize" target="_blank" title="Twitter">
-    <i class="icon-large icon-fixed-width icon-twitter"></i>
+  <a href="https://plus.google.com/{{ site.author.googleplus }}" target="_blank" title="Google+">
+    <i class="icon-gplus"></i>
+  </a>
+  <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="Twitter">
+    <i class="icon-twitter"></i>
   </a>
 </div>

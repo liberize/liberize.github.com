@@ -113,7 +113,7 @@ dnsmasq 带有 DHCP 功能，可以取代 udhcpd，如果使用 dnsmasq 作为 D
 
 privoxy 支持 intercepting proxy，支持基于规则的请求拦截、内容过滤，配合完善、精准的 adblock plus 规则，去广告效果可以与 adblock plus 媲美。只是从 abp 规则向 privoxy 规则的转换比较复杂，找了几个脚本（比如[这个](https://github.com/Andrwe/privoxy-blocklist)），处理得都不是很好，最后用了一个 [haskell 程序](https://projects.zubr.me/wiki/adblock2privoxy)。只是作者没有提供 arm 版本的二进制文件，只能自己编译，而 haskell 的编译巨坑无比，软件源里面的 ghc 版本太旧，没有带 ghci，导致有些包编译不过，所以只能先用旧的 ghc 编译新的 ghc，这其中无数的坑自然不必说，因此我只好在另一台 vps 上面跑 adblock2privoxy 二进制文件，然后让树莓派定期去拉取生成的 privoxy 规则文件。
 
-直到不久之前，从 stackoverflow 上面[这个回答](http://stackoverflow.com/a/29380559) 的评论中得知 debian 的 unstable 源里面提供了带 ghci 的 ghc-7.8.4，于是我赶紧修改软件源，装上了新版 ghc，然后按官网说明编译二进制文件，中间运行 `cabal update` 和 `cabal install ...` 的时候无数次卡死，不过最后还是成功编译出来了，并且运行正常。附上编译好的二进制文件：<a href="http://pan.baidu.com/s/1ntxfIB3" title="前往网盘下载"><button class="blue"><i class="icon-download-alt"></i> 百度网盘</button></a>。
+直到不久之前，从 stackoverflow 上面[这个回答](http://stackoverflow.com/a/29380559) 的评论中得知 debian 的 unstable 源里面提供了带 ghci 的 ghc-7.8.4，于是我赶紧修改软件源，装上了新版 ghc，然后按官网说明编译二进制文件，中间运行 `cabal update` 和 `cabal install ...` 的时候无数次卡死，不过最后还是成功编译出来了，并且运行正常。附上编译好的二进制文件：<a href="http://pan.baidu.com/s/1ntxfIB3" title="前往网盘下载"><button class="blue"><i class="icon-download"></i> 百度网盘</button></a>。
 
 废话少说，先安装 privoxy：
 

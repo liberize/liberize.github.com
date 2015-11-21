@@ -116,6 +116,10 @@ a:hover, a:active { outline: none; }
 .ie7 #navbar ul li a {
   display: block;
 }
+#rss-link a i {
+  font-size: 20px;
+  line-height: 20px;
+}
 
 #main {
   width: 100%;
@@ -554,6 +558,7 @@ pre code {
 }
 #search-form button {
   margin-left: 8px;
+  padding: 0px 12px;
   width: 50px;
   float: right;
 }
@@ -656,6 +661,10 @@ pre code {
   float: left;
   margin-right: 10px;
 }
+.tag-box-wrapper .tag-box li i {
+  font-size: 18px;
+  line-height: 36px;
+}
 .tag-box li i {
   opacity: .9;
   line-height: 32px;
@@ -695,7 +704,7 @@ pre code {
 /*  Widgets  */
 #tag-cloud, #contacts-list {
   margin-left: 40px;
-  margin-right: 30px;
+  margin-right: 20px;
   margin-bottom: 15px;
 }
 #tag-cloud a {
@@ -705,7 +714,7 @@ pre code {
 }
 #tag-cloud a:hover { color: #ae432e !important; }
 #contacts-list { margin-top: 6px; }
-#contacts-list a { margin-right: 2px; }
+#contacts-list a i { font-size: 20px; }
 .ie7 #contacts-list a { margin-right: 0; }
 #fixed-container { width: 271px; }
 
@@ -738,17 +747,27 @@ pre code {
   -moz-transform: rotateZ(360deg);
   transform: rotateZ(360deg);
 }
-#ds-reset .ds-powered-by {
-  display: none;
+#ds-reset .ds-powered-by, #ds-reset .ds-meta {
+  display: none !important;
 }
-#ds-reset {
+#ds-reset, #ds-reset .ds-comment-body p {
   font-size: 100% !important;
 }
-#ds-reset .ds-comment-body p {
-  font-size: 100% !important;
+#ds-reset .ds-textarea-wrapper, #ds-reset .ds-gradient-bg,
+#ds-reset .ds-post-button, #ds-smilies-tooltip ul.ds-smilies-tabs li a {
+  background: none !important;
 }
 
-/*  Baidu Share  */
+/*  Share  */
+#share a { color: #444; }
+#share a.wechat:hover { color: #51c332; }
+#share a.weibo:hover { color: #e72c40; }
+#share a.qzone:hover { color: #fcb920; }
+#share a.twitter:hover { color: #55acee; }
+#share a.facebook:hover { color: #415d98; }
+#share a.googleplus:hover { color: #dc5046; }
+#share a i { font-size: 18px; }
+
 #bdshare_s a, #bdshare_s h6, #bdshare a, #bdshare span {
   font-family: inherit !important;
 }
@@ -776,8 +795,12 @@ pre code {
 #back-top a {
   color: #fff;
   text-decoration: none;
-  padding: 12px 14px;
+  padding: 10px;
   display: inline-block;
+}
+#back-top a i {
+  font-size: 24px;
+  line-height: 32px;
 }
 
 /*  Ajax Loader  */

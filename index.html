@@ -17,9 +17,8 @@ description: "一个程序员的技术博客，分享折腾的点点滴滴"
 
     <section>
       <p>
-        {{ post.content | strip_html | truncate:300 }}
+        {{ post.content | strip_html | truncate:150 }}
       </p>
-      <a class="button-link" href="{{ post.url }}" title="查看全文">read more</a>
     </section>
 
     <footer>

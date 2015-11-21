@@ -21,6 +21,9 @@ author :
   email : liberize@gmail.com
   github : liberize
   twitter : liberize
+  weibo : liberize
+  v2ex : liberize
+  googleplus : 118314345733357791088
   feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
@@ -90,7 +93,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : duoshuo
     duoshuo :
       short_name : liberize
     disqus :
@@ -126,7 +129,7 @@ JB :
   # Set 'provider' to false to turn sharing off globally.
   #
   sharing :
-    provider : false
+    provider : direct
 
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:

@@ -42,6 +42,6 @@ ${else}${voffset 8}${color0}${font ConkyColors:size=15}q${font}${color}${voffset
 
 限于屏幕分辨率，修改了整体的高度和宽度，去掉了部分内容。还有一些改动的细节：修改了日历的显示，排列更整齐；修改了时钟样式，更美观；替换了获取农历日期的脚本 lunar，使用 Python 实现，效率更高。
 
-所有文件打包下载：<a href="http://pan.baidu.com/s/1044a0" title="前往网盘下载"><button class="blue"><i class="icon-download-alt"></i> 百度网盘</button></a>
+所有文件打包下载：<a href="http://pan.baidu.com/s/1044a0" title="前往网盘下载"><button class="blue"><i class="icon-download"></i> 百度网盘</button></a>
 
 其中，除了配置文件外，还包含了全部字体、脚本以及 Conky 文档。
