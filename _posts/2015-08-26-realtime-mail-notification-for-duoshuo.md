@@ -124,5 +124,13 @@ def send_email(email, content):
 由于采用轮询方式，需要脚本 24h 运行，可以放在 vps 或者 树莓派上面，然后设置成开机启动，在 `/etc/rc.local` 里加一行：
 
 ```bash
-nohup python /root/duoshuo.py >/dev/null 2>&1 &
+nohup python /path/to/duoshuo.py >/dev/null 2>&1 &
+```
+
+UPDATE:
+
+已更新成 crontab 版本，以一分钟执行一次为例，编辑 crontab 添加：
+
+```
+* * * * * python /path/to/duoshuo-crontab.py
 ```
