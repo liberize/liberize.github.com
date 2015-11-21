@@ -116,10 +116,6 @@ a:hover, a:active { outline: none; }
 .ie7 #navbar ul li a {
   display: block;
 }
-#rss-link a i {
-  font-size: 20px;
-  line-height: 20px;
-}
 
 #main {
   width: 100%;
@@ -661,10 +657,6 @@ pre code {
   float: left;
   margin-right: 10px;
 }
-.tag-box-wrapper .tag-box li i {
-  font-size: 18px;
-  line-height: 36px;
-}
 .tag-box li i {
   opacity: .9;
   line-height: 32px;
@@ -714,7 +706,7 @@ pre code {
 }
 #tag-cloud a:hover { color: #ae432e !important; }
 #contacts-list { margin-top: 6px; }
-#contacts-list a i { font-size: 20px; }
+#contacts-list a { margin-right: 2px; }
 .ie7 #contacts-list a { margin-right: 0; }
 #fixed-container { width: 271px; }
 
@@ -760,14 +752,13 @@ pre code {
 
 /*  Share  */
 #share a { color: #444; }
+#share a:hover { text-decoration: none; }
 #share a.wechat:hover { color: #51c332; }
 #share a.weibo:hover { color: #e72c40; }
 #share a.qzone:hover { color: #fcb920; }
 #share a.twitter:hover { color: #55acee; }
 #share a.facebook:hover { color: #415d98; }
 #share a.googleplus:hover { color: #dc5046; }
-#share a i { font-size: 18px; }
-
 #bdshare_s a, #bdshare_s h6, #bdshare a, #bdshare span {
   font-family: inherit !important;
 }
@@ -795,12 +786,8 @@ pre code {
 #back-top a {
   color: #fff;
   text-decoration: none;
-  padding: 10px;
+  padding: 12px 14px;
   display: inline-block;
-}
-#back-top a i {
-  font-size: 24px;
-  line-height: 32px;
 }
 
 /*  Ajax Loader  */

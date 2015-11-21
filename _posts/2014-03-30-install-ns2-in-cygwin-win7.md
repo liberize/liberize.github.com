@@ -101,4 +101,4 @@ ns nam-example.tcl
 
 如果想在 Cygwin 命令窗口中执行，需要首先运行 XWin Server，关掉窗口但不要退出，在 `~/.bashrc` 中加入 `export DISPLAY=:0.0`，然后打开 Cygwin 命令窗口，输入以上命令。
 
-最后，附上包含 NS2 的完整的 Cygwin 包：<a href="http://pan.baidu.com/s/1pJud6GV" title="前往网盘下载"><button class="blue"><i class="icon-download"></i> 百度网盘</button></a>
+最后，附上包含 NS2 的完整的 Cygwin 包：<a href="http://pan.baidu.com/s/1pJud6GV" title="前往网盘下载"><button class="blue"><i class="icon-download-alt"></i> 百度网盘</button></a>
