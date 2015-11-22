@@ -94,15 +94,23 @@ gpu_mem=256
 
 然后，可以更换你喜欢的主题。**更换主题前请将 Language 改为 English**，不然换了主题以后很有可能中文字符全都变成方块，找不到设置菜单。选择『皮肤』，右侧『皮肤』显示目前是默认的 Confluence，回车可以查看其他主题。吐槽一下，主题不支持预览也就算了，有些居然连图片都没有，也是醉了。除了 Confluence 以外，比较优秀又耗资源较少的首推 Amber。不过 Amber 似乎没有网格视图，可能会有少许 bug。换了『皮肤』以后，底下的『导航音效』也可以设为主题配套的音效。
 
-接着，打开遥控功能。设置里面选择『服务』，然后选择『远程控制』，选中『允许本机程序控制 kodi』之后就可以通过手机 app 遥控 kodi 了。Android 上可用 Yatse，iOS 可用 Kodi Remote。我用的是 Kodi Remote，有些功能是隐藏的，比如长按菜单按钮打开上下文菜单等。
+![Kodi Amber 主题]({{ IMAGE_PATH }}/kodi-amber-theme.png)
+
+接着，打开遥控功能。设置里面选择『服务』，然后选择『Web 服务器』，勾选『允许通过 HTTP 控制 Kodi』并设置『端口』、『用户名』、『密码』，之后就可以通过手机 app 遥控 kodi 了。Android 上可用 Yatse，iOS 可用 Kodi Remote。我用的是 Kodi Remote，有些功能是隐藏的，比如长按菜单按钮打开上下文菜单等。
+
+![Kodi 遥控设置]({{ IMAGE_PATH }}/kodi-web-control.png)
 
 『服务』里面还有一些其他设置，比如 UPnP（可取代[上一节](/tech/access-media-resource-on-raspberry-pi.html)的 MiniDLNA）、AirPlay（可取代后面的 shairport-sync）等。
 
 如果音频是外接音箱，需要设置音频输出。设置里面选择『系统』，然后选择『音频输出』，修改『音频输出设备』。如果通过 3.5mm 插孔连接，选择 `Pi: Analogue`，如果通过 USB 声卡连接，选择 `ALSA: USB 2.0 Device`。（音频选择 ALSA 之后，将不能使用 OMX 加速。）
 
+![Kodi 音频输出设置]({{ IMAGE_PATH }}/kodi-audio-output.png)
+
 最后，就是安装插件了。官方插件库以英文为主，中文插件库有 [xbmc-addons-chinese](https://github.com/taxigps/xbmc-addons-chinese/raw/master/repo/repository.xbmc-addons-chinese/repository.xbmc-addons-chinese-1.2.0.zip)，和 [HDPfans](http://xbmc.hdpfans.com/repository.hdpfans.xbmc-addons-chinese.zip)，HDPfans 里面很多插件已经失效。下载 zip 文件之后，在设置里面选择『插件』，然后选择『从 zip 文件安装』。安装完成以后，可以在『获取插件』里面看到『Chinese Add-ons』和『HDPfans 中文插件库』。
 
 插件库里的插件类型有音乐插件、视频插件、图片插件、服务、字幕、歌词等等。目前（14.2版本）基本可用的插件有：PPTV、Youku TV、百度云、奇艺视频、搜狐视频、亚洲电视、CNTV 等等，这些插件大都有一些 bug。体验最好的当属 [Youku TV](https://github.com/catro/plugin.video.youkutv)，直接模拟 Youku TV 官方 app 的界面，与盒子界面风格一致，里面提供三种分段方式：『分段』、『堆叠』、『m3u8』，不幸的是分段、堆叠这两种方式在树莓派上不能开启硬件加速，只有声音没有图像，这跟优酷 flv 的格式有关，m3u8 在每一段衔接的地方会卡一会儿，而且不能续播。百度云插件可以观看百度网盘的视频，只是缓冲速度比较慢，我这儿 4M 小水管基本不能看。
+
+![Kodi Youku TV 插件]({{ IMAGE_PATH }}/kodi-youku-tv-addon.png)
 
 说到本地资源管理，不得不提到刮削器。刮削器的作用是根据文件名获取电影、电视剧等相关信息，常用的有豆瓣刮削器、时光网刮削器。目前刮削器还很不智能，必须对视频重命名才能正确获取信息。具体使用方法是，在视频、音频里面添加一个目录，然后设置刮削器，每当添加新文件，需要更新资料库。
 

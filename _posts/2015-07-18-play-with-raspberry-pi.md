@@ -23,7 +23,7 @@ tags: ["树莓派"]
 * NAS 篇：
     * [将树莓派打造成多功能下载机](/tech/turn-raspberry-pi-into-a-downloader.html)（aria2 + transmission + xware）
     * [访问树莓派的媒体资源](/tech/access-media-resource-on-raspberry-pi.html)（minidlna + bubbleupnp + samba）
-    * 将树莓派打造成电视盒子（kodi + shairport）
+    * [将树莓派打造成电视盒子](/tech/turn-raspberry-pi-into-a-tv-box.html)（kodi + shairport）
 * 硬件篇：
     * 给树莓派加上液晶显示、温度监控和红外遥控（1602 液晶 + ds18b20 温度传感器 + 红外接收头）
     * 树莓派不用外设发射调频广播（gpio + 天线）
@@ -37,3 +37,11 @@ tags: ["树莓派"]
     * 树莓派实现宠物自动喂食器（一直想养一只喵星人来着）
     * 使用树莓派打造 3D 打印机（是不是感觉很高大上）
     * 使用树莓派打造四轴飞行器（想想都有点小激动）
+
+废话不多说，开始爆照！
+
+以下是目前作为 NAS 的树莓派：
+
+![树莓派 NAS]({{ IMAGE_PATH }}/raspberry-pi-nas-1.jpg)
+
+![树莓派 NAS]({{ IMAGE_PATH }}/raspberry-pi-nas-2.jpg)

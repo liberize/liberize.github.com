@@ -227,14 +227,8 @@ article section p {
   margin-bottom: .67em;
 }
 article section p:last-child { margin-bottom: 0; }
-article section ul li {
-  font-size: 107%;
-  line-height: 180%;
-}
-article section ol li {
-  font-size: 107%;
-  line-height: 180%;
-}
+article section ul li { line-height: 180%; }
+article section ol li { line-height: 180%; }
 article footer {
   border-top: 1px solid #bfbfbf;
   padding-top: 10px;
