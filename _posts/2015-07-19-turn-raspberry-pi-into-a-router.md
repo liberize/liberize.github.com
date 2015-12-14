@@ -121,7 +121,7 @@ sudo service udhcpd restart
 sudo update-rc.d udhcpd defaults
 ```
 
-## 三、配置 iptables、ifconfig
+## 三、配置 iptables 和网络接口
 
 打开网络接口配置文件 `/etc/network/interfaces`，设置 wlan0 为静态 ip，如下：
 
