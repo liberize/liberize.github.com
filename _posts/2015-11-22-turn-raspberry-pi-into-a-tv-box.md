@@ -118,25 +118,6 @@ gpu_mem=256
 
 ### 3. 性能优化
 
-其实默认情况下 kodi 已经运行得比较流畅了，可以从超频和高级设置两方面继续优化。
-
-其实超频可以单独开一节仔细讲讲，姑且放在这儿了。如果打算长期超频运行，建议装上散热片，不然可能烧坏板子。修改 `/boot/config.txt`：
-
-```
-arm_freq=1000
-sdram_freq=500
-core_freq=500
-over_voltage=6
-temp_limit=80
-boot_delay=0
-disable_splash=1
-initial_turbo=60
-```
-
-其中，`arm_freq` 表示 ARM 频率，默认是 700MHz，可以超频到 1GHz；`sdram_freq` 表示 SDRAM 频率，默认是 400MHz，可以超到 500MHz；`core_freq` 表示 GPU 核心频率，默认是 250Hz，可以超到 500MHz；`over_voltage` 表示调整 arm/gpu 核心电压，默认是 0，对应 1.2V，可以设为 6，对应 1.2 + 0.025 * 6 = 1.35V；`temp_limit` 设为 80 度，超过 80 度将停止超频，恢复默认设置。
-
-还有一个选项 `force_turbo`，设为 1 表示一直以最高频率运行，默认是使用 ondemand 策略自动降频，设置以后将失去保修。上面那个 `initial_turbo` 表示开机时保持 turbo 状态多久，可以加快开机速度，不影响保修。
-
 kodi 有一些高级设置在 GUI 里面无法修改，可以编辑 `~/.kodi/userdata/advancedsettings.xml` 来修改。里面有很多设置项，可以参考[官方文档](http://kodi.wiki/view/Advancedsettings.xml)，常见的网络相关的设置有 buffermode、readbufferfactor、cachemembuffersize 等，当网络不好时可做如下设置：
 
 ```
@@ -149,7 +130,7 @@ kodi 有一些高级设置在 GUI 里面无法修改，可以编辑 `~/.kodi/use
 </advancedsettings>
 ```
 
-其中，`buffermode` 表示哪些文件需要缓存（网络、本地），设为 1 表示缓存所有文件；`readbufferfactor` 表示缓存填充速率，设为 4.0 则下载速率限制为 4.0 * 视频平均比特率；`cachemembuffersize` 表示缓冲区大小，实际 RAM 占用是这个值的 3 倍。
+其中，`buffermode` 表示哪些文件需要缓存（网络、本地），设为 1 表示缓存所有文件；`readbufferfactor` 表示缓存填充速率，设为 4.0 则下载速率限制为 4.0 * 视频平均比特率；`cachemembuffersize` 表示缓冲区大小，设为 40M 则实际 RAM 占用为 3 * 40M = 120M。
 
 ## 三、Shairport Sync
 
