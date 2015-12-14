@@ -197,45 +197,31 @@ up iptables-restore < /etc/iptables.ipv4.nat
 
 function do_start {
     log_daemon_msg "Starting iptables service" "iptables"
-
     # hostapd rules
     if ls /etc/rc*.d/*hostapd; then
         iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
         iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
         iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
     fi
-
     log_end_msg $?
 }
 
 function do_stop {
     log_daemon_msg "Stopping iptables service" "iptables"
-
     # hostapd rules
     if ls /etc/rc*.d/*hostapd; then
         iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
         iptables -D FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCE$
         iptables -D FORWARD -i wlan0 -o eth0 -j ACCEPT
     fi
-
     log_end_msg $?
 }
 
 case "$1" in
-    start)
-        do_start
-    ;;
-    stop)
-        do_stop
-    ;;
-    restart)
-        do_stop
-        do_start
-    ;;
-    *)
-        echo "Usage: /etc/init.d/iptables {start|stop|restart}"
-        exit 1
-    ;;
+    start)      do_start;;
+    stop)       do_stop;;
+    restart)    do_stop; do_start;;
+    *)          echo "Usage: /etc/init.d/iptables {start|stop|restart}"; exit 1;;
 esac
 
 exit 0
