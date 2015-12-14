@@ -228,7 +228,7 @@ filterfile ocplayer.filter
 
 ```
 FILTER: ocplayer Insert onens.clean.player.user.js
-s@</head>@\n<script type="text/javascript" src="http://gesion.duapp.com/script/onens.clean.player.user.js"></script>\n$0\n@
+s@</head>@\n<script type="text/javascript" src="http://code.taobao.org/svn/ocp/trunk/ocplayer.js"></script>\n$0\n@
 ```
 
 两个文件放到 privoxy 的配置文件目录 `/etc/privoxy/`，然后重启 privoxy 服务即可。
