@@ -12,6 +12,8 @@ tags: ["树莓派", "路由器"]
 
 既然是无线路由器，除了树莓派以外还需要一张无线网卡，本人使用的是 EP-N8508GS，这是一款廉价的无线网卡，支持软 AP，但是无法使用 aircrack，如果想用来破解无线网络，还是不要买这款了。如果你用的是其他型号的无线网卡，本文的大部分步骤应该仍然有效。如果是用的 360、百度、小米之类的随身 WiFi，可能有驱动问题，请参考[这篇文章](http://www.freemindworld.com/blog/2013/131010_360_wifi_in_linux.shtml)解决。
 
+本文的基本思路是，让树莓派利用有线网卡连接到网络，利用无线网卡创建 AP，然后通过 iptables 规则在两个网卡之间转发数据包。如果只用无线网卡，可以参考 [Arch Linux 官方文档](https://wiki.archlinux.org/index.php/Software_access_point)。
+
 ## 一、安装并配置 hostapd
 
 为了使用无线网卡 AP 功能，需要安装 hostpad。如果你的芯片型号在支持之列，请直接从软件源安装：
@@ -149,7 +151,7 @@ sudo ifdown wlan0
 sudo ifup wlan0
 ```
 
-接着开始配置 NAT。修改 `/etc/sysctl.conf`，打开内核 IP 转发，在末尾添加：
+接着开始配置 iptables。修改 `/etc/sysctl.conf`，打开内核 IP 转发，在末尾添加：
 
 ```
 net.ipv4.ip_forward=1
