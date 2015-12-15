@@ -54,7 +54,7 @@ def check(duoshuo):
         for log in log_data['response']:
             if log['log_id'] == last_log_id:
                 break
-            if log['action'] == 'create':
+            if log['action'] == 'create' and log['meta']['author_name'] != duoshuo['short_name']:
                 thread_data = get_response('http://api.duoshuo.com/threads/listPosts.json', {
                     'short_name': duoshuo['short_name'],
                     'thread_key': log['meta']['thread_key']
@@ -121,16 +121,8 @@ def send_email(email, content):
 
 ## 三、脚本的运行
 
-由于采用轮询方式，需要脚本 24h 运行，可以放在 vps 或者 树莓派上面，然后设置成开机启动，在 `/etc/rc.local` 里加一行：
-
-```bash
-nohup python /path/to/duoshuo.py >/dev/null 2>&1 &
-```
-
-UPDATE:
-
-已更新成 crontab 版本，以一分钟执行一次为例，编辑 crontab 添加：
+使用 crontab 定期执行，以一分钟执行一次为例，编辑 crontab 添加：
 
 ```
-* * * * * python /path/to/duoshuo-crontab.py
+* * * * * python /path/to/duoshuo.py
 ```
