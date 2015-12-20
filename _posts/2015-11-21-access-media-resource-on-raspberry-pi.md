@@ -45,6 +45,15 @@ sudo service samba restart
 
 然后在另一台电脑上测试一下能否访问共享目录。以 Mac 为例，确保 pc 和 树莓派在同一局域网内，在 Finder 左侧 Shared 里面应该已经可以看到 `raspberrypi`，以 pi 的身份登陆，可以看到两个共享目录，分别是 `pi` 和 `share`，这里的 `share` 就是 pi 上面共享的 `/media/NAS`。里面如果有视频，可以直接在 Mac 上播放了。
 
+经过测试 samba 读写速度分别为 7.9 MB/s 和 8.4 MB/s，考虑到树莓派是百兆网口，这个速度还算正常。进一步的性能优化可以参考[这里](https://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/speed.html)，比如加上：
+
+```
+[global]
+    socket options = TCP_NODELAY IPTOS_LOWDELAY
+```
+
+读的速度可以提升到 9.4 MB/s，写的速度基本没变。
+
 ## 三、MiniDLNA + BubbleUPnP
 
 DLNA 是一种比较常见、广泛支持的数字媒体设备之间互联互通的解决方案。MiniDLNA 是一个支持 DLNA/UPnP 协议的轻量级的服务端软件。
