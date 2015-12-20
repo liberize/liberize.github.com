@@ -28,7 +28,7 @@ sudo apt-get install samba
 
 修改配置文件 `/etc/samba/smb.conf`，加上：
 
-```
+```ini
 [share]
     path = /media/NAS
     valid users = root pi
@@ -47,7 +47,7 @@ sudo service samba restart
 
 经过测试 samba 读写速度分别为 7.9 MB/s 和 8.4 MB/s，考虑到树莓派是百兆网口，这个速度还算正常。进一步的性能优化可以参考[这里](https://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/speed.html)，比如加上：
 
-```
+```ini
 [global]
     socket options = TCP_NODELAY IPTOS_LOWDELAY
 ```
