@@ -14,9 +14,9 @@ tags: ["树莓派"]
 
 如果只是偶尔下点东西，可以用一个大一点的 sd 卡或 u 盘，不过价格会比较贵。建议还是通过 usb 接一块机械硬盘，2.5 寸 3.5 寸都可以。
 
-如果通过 usb 接机械硬盘，需要一个 sata 到 usb 的转接器，可以是硬盘盒、硬盘底座或者转接线。我用的是 3.5 寸的 WD10EZEX 1TB 硬盘，之前买了某宝上比较火的 ORICO 6619US3 硬盘底座，结果在使用 dlna 和 samba 的时候，只要一传输大文件，几秒钟之内就会断开连接，`dmesg` 显示 usb disconnect，`fdisk -l` 显示硬盘由原来的 /dev/sda 变成 /dev/sdb，后来找到了[这篇文章](https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=85449)，得知是 dock 不兼容。后来在官方的[兼容列表](http://elinux.org/RPi_VerifiedPeripherals#USB_to_IDE.2FSATA)里面找到了 JM20337 这款芯片，于是在某宝上买了一根廉价的转接线。经测试 3.5 寸硬盘工作不稳定，应该是供电问题，换成 2.5 寸外加 USB 供电就 OK 了。
+如果通过 usb 接机械硬盘，需要一个 sata 到 usb 的转接器，可以是硬盘盒、硬盘底座或者转接线。我用的是 3.5 寸的 WD10EZEX 1TB 硬盘，之前买了某宝上比较火的 ORICO 6619US3 硬盘底座，结果在使用 dlna 和 samba 的时候，只要一传输大文件，几秒钟之内就会断开连接，`dmesg` 显示 usb disconnect，`fdisk -l` 显示硬盘由原来的 /dev/sda 变成 /dev/sdb，后来找到了[这篇文章](https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=85449)，得知是 dock 不兼容。后来在官方的[兼容列表](http://elinux.org/RPi_VerifiedPeripherals#USB_to_IDE.2FSATA)里面找到了 JM20337 这款芯片，于是在某宝上买了一根廉价的转接线，确实兼容性很好。
 
-另外，使用 usb 接机械硬盘的一个常见问题是供电不足。建议硬盘外接电源供电，3.5 寸硬盘因为电压是 12V 必须额外供电，同时应该保证外接电源的额定电流足够大，可以避免很多奇怪的问题。
+另外，使用 usb 接机械硬盘的一个常见问题是供电不足。建议硬盘外接电源供电，3.5 寸硬盘因为电压是 12V 必须额外供电，同时应该保证外接电源的额定电流足够大，可以避免很多奇怪的问题。因为供电问题，我已经换成了 2.5 寸硬盘，使用 usb 接口供电，目前稳定工作中。
 
 关于硬盘文件系统的选择，如果只用于树莓派，不用考虑 win 和 mac 的兼容性，建议使用 ext2/3/4。如果使用 ntfs，需要运行 ntfs-3g 的 daemon，会占用一定的资源（空闲时也有 3-5% 的 cpu），另外读写速度也远不如 ext2/3/4。我用的是 ext2，相比 ext4 没有日志，减少了磁盘读写。另外，挂载的时候要加上 `noatime` 参数，同样可以减少磁盘读写。
 
