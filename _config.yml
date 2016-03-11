@@ -3,7 +3,7 @@
 permalink: /:categories/:title.html
 
 safe: false
-gems: [jekyll-paginate]
+gems: ["jekyll-paginate"]
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 paginate: 10
 encoding: utf-8

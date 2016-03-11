@@ -7,8 +7,7 @@
 <head>
   <meta charset="UTF-8">
 
-  {% capture home_url %}{{ HOME_PATH | append: '/index.html' | replace: '//', '/' }}{% endcapture %}
-  <title>{{ page.title }}{% if page.url != home_url %} - {{ site.title }}{% endif %}</title>
+  <title>{{ page.title }}{% if page.url != HOME_PATH %} - {{ site.title }}{% endif %}</title>
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords | join: "," }}">{% endif %}
   {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
   <meta name="author" content="{{ site.author.name }}">
@@ -42,7 +41,7 @@
       <!-- Navigation Bar -->
       <nav id="navbar">
         <ul>
-          <li{% if page.url == home_url %} class="active"{% endif %}>
+          <li{% if page.url == HOME_PATH %} class="active"{% endif %}>
             <a href="{{ HOME_PATH }}" title="首页">首页</a>
           </li>
           <li{% if page.url == site.JB.categories_path %} class="active"{% endif %}>
