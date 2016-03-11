@@ -5,6 +5,7 @@ keywords: ["校招", "工作", "面经"]
 description: "我一个月来的求职经历记录"
 category: "life"
 tags: ["工作"]
+published: false
 ---
 {% include JB/setup %}
 
