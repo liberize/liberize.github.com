@@ -10,7 +10,7 @@ tags: ["Xposed"]
 
 以微信国内版 6.5.13 为例。
 
-# 一、反编译
+## 一、反编译
 
 准备工具：
 
@@ -18,13 +18,13 @@ tags: ["Xposed"]
 2. dex2jar + jd-gui（或 jadx）
 
 
-## 1. 使用 apktool 反编译 apk
+### 1. 使用 apktool 反编译 apk
 
     java -jar apktool_2.2.4.jar d com.tencent.mm.apk
 
 得到目录 com.tencent.mm，后面会用到 res 目录下的资源文件
 
-## 2. 使用 dex2jar 将 dex 转为 jar
+### 2. 使用 dex2jar 将 dex 转为 jar
 
 解压 com.tencent.mm.apk 取出 classes.dex，classes2.dex
 
@@ -35,14 +35,14 @@ tags: ["Xposed"]
 
 得到文件 classes-dex2jar.jar 和 classes2-dex2jar.jar
 
-## 3. 使用 jd-gui 查看反编译后的代码
+### 3. 使用 jd-gui 查看反编译后的代码
 
 打开 classes-dex2jar.jar，定位到 com.tencent.mm.R，打开 R.class
 
 打开 classes2-dex2jar.jar，定位到 com.tencent.mm.plugin.wallet_core.ui.l，打开 l.class
 
 
-# 二、找资源 ID 和变量名
+## 二、找资源 ID 和变量名
 
 打开 WeChatFp 源码 ObfuscationHelper.java，可以看到以下资源 ID：
 
@@ -60,7 +60,7 @@ tags: ["Xposed"]
 
 只需要找到对应的 ID 和变量名，加进去就行了，以下 1-3 为资源，4-8 为控件对应的变量
 
-## 1. Finger_icon - 指纹图标
+### 1. Finger_icon - 指纹图标
 
 res/drawable-xxhdpi-v4 找到指纹图标 agl.png，
 
@@ -72,7 +72,7 @@ res/values/public.xml，搜索『agl』，找到
 
 0x7f02031a 转成十进制 2130838298
 
-## 2. Finger_title - 指纹标题文本
+### 2. Finger_title - 指纹标题文本
 
 res/values/strings.xml，搜索『请验证指纹』，找到
 
@@ -86,7 +86,7 @@ res/values/public.xml，搜索『dtx』，找到
 
 0x7f081864 转成十进制 2131236964
 
-## 3. passwd_title - 密码标题文本
+### 3. passwd_title - 密码标题文本
 
 res/values/strings.xml，搜索『请输入支付密码』，找到
 
@@ -98,19 +98,19 @@ res/values/public.xml，搜索『du2』，找到
 
 0x7f081869 转成十进制 2131236969
 
-## 4. PaypwdView - 密码面板（EditHintPasswdView）
+### 4. PaypwdView - 密码面板（EditHintPasswdView）
 
 com.tencent.mm.plugin.wallet_core.ui.l 搜索『EditHintPasswdView』，找到
 
     public EditHintPasswdView rLB;
 
-## 5. PaypwdEditText - 密码文本框（TenpaySecureEditText）
+### 5. PaypwdEditText - 密码文本框（TenpaySecureEditText）
 
 点击 EditHintPasswdView 跳转到定义，搜索『TenpaySecureEditText』找到
 
 private TenpaySecureEditText wDJ;
 
-## 6. PayInputView - 输入键盘（View）
+### 6. PayInputView - 输入键盘（View）
 
 搜索『isShown』找到后面紧跟『setVisibility』的地方，
 
@@ -122,7 +122,7 @@ private TenpaySecureEditText wDJ;
 
     protected View nol;
 
-## 7. PayTitle - 对话框标题（TextView）
+### 7. PayTitle - 对话框标题（TextView）
 
 因为标题文本为 Finger_title 或 passwd_title，按 passwd_title （步骤 3 的结果）去找，
 
@@ -138,7 +138,7 @@ com.tencent.mm.plugin.wallet_core.ui.l 搜索『fja』，找到
 
     public TextView rLw;
 
-## 8. Passwd_Text - 密码/指纹切换（TextView）
+### 8. Passwd_Text - 密码/指纹切换（TextView）
 
 res/values/strings.xml，搜索『使用指纹』，找到
 
