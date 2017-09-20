@@ -160,5 +160,6 @@ com.tencent.mm.plugin.wallet_core.ui.l 搜索『ffD』，找到
 
     public TextView rLQ;
 
+基于以上思路，我写了一个 [shell 脚本](https://gist.github.com/liberize/44b151b6b40a2af1716d484ccd4f8e66)自动解析 apk，[完整工具包](https://pan.baidu.com/s/1hr5FZQO)上传到网盘了。
 
 最后感谢作者 @dss16694 开源此插件的代码。
