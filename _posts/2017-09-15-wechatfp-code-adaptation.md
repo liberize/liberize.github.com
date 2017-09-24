@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "WeChatFp 插件适配"
-keywords: ["WeChatFp", "微信", "指纹支付", "Xposed"]
-description: "修改 WeChatFp 代码适配不同微信版本"
+title: "WechatFp 插件适配"
+keywords: ["WechatFp", "微信", "指纹支付", "Xposed"]
+description: "修改 WechatFp 代码适配不同微信版本"
 category: "tech"
 tags: ["Xposed"]
 ---
