@@ -68,6 +68,8 @@ tags: ["Xposed"]
 
 这些混淆过的变量名可以参考上篇文章『[WechatFp 插件适配](/tech/wechatfp-code-adaptation.html)』获得。
 
+因为 FingerprintIdentity 指纹库里的魅族和三星 sdk 需要额外权限，暂时不知道怎么改 AndroidManifest.xml，索性去掉了这俩的支持。
+
 ### 2. 反编译得到 smali 代码
 
 Android Studio 菜单 Build -> Build APK，编译 WechatFpInject 工程，得到 app-debug.apk。注意这个 apk 是不能运行的。
