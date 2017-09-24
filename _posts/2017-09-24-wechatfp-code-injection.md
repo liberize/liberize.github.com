@@ -27,10 +27,6 @@ tags: ["Xposed"]
 
 ## 二、反编译微信 apk
 
-准备工具：
-
-1. apktool
-
 ### 1. 使用 apktool 反编译 apk
 
     java -jar apktool_2.2.4.jar -r d com.tencent.mm.apk
@@ -43,7 +39,7 @@ tags: ["Xposed"]
 
     if-eqz v0, :cond_2
 
-此处参考『(微信的二次打包)[http://www.jianshu.com/p/a0e6b3f15d78]』。
+此处参考『[微信的二次打包](http://www.jianshu.com/p/a0e6b3f15d78)』。
 
 ## 三、注入 WechatFp 的代码
 
@@ -70,7 +66,7 @@ tags: ["Xposed"]
         ...
     }
 
-这些混淆过的变量名可以参考上篇文章『(WechatFp 插件适配)[(/tech/wechatfp-code-adaptation.html)]』获得。
+这些混淆过的变量名可以参考上篇文章『[WechatFp 插件适配](/tech/wechatfp-code-adaptation.html)』获得。
 
 ### 2. 反编译得到 smali 代码
 
@@ -82,7 +78,7 @@ Android Studio 菜单 Build -> Build APK，编译 WechatFpInject 工程，得到
 
 ### 3. 注入 smali 代码到微信
 
-#### 复制独立的 smali 文件
+#### 1) 复制独立的 smali 文件
 
 复制 smali 目录下的以下文件到微信的 smali 目录下相同路径：
 
@@ -92,7 +88,7 @@ Android Studio 菜单 Build -> Build APK，编译 WechatFpInject 工程，得到
 
 2、3 可以把里面的 BuildConfig.smali 和 R\*.smali 删除。
 
-#### 注入 WechatFingerprint.enable 方法调用
+#### 2) 注入 WechatFingerprint.enable 方法调用
 
 复制 smali/com/tencent/mm/plugin/wallet/pay/ui/WalletPayUI.smali 里的
 
@@ -107,7 +103,7 @@ Android Studio 菜单 Build -> Build APK，编译 WechatFpInject 工程，得到
 
         ...
 
-#### EditHintPasswdView 加入 getEditText 方法
+#### 3) EditHintPasswdView 加入 getEditText 方法
 
 复制 smali/com/tencent/mm/wallet_core/ui/formview/EditHintPasswdView.smali 里的
 
@@ -123,7 +119,7 @@ Android Studio 菜单 Build -> Build APK，编译 WechatFpInject 工程，得到
 
 到微信 smali_classes2/com/tencent/mm/wallet_core/ui/formview/EditHintPasswdView.smali 文件里。
 
-#### 注入 WechatFingerprint.init 方法调用
+#### 4) 注入 WechatFingerprint.init 方法调用
 
 复制 com/tencent/mm/plugin/wallet_core/ui/l.smali 里的
 
@@ -151,7 +147,7 @@ Android Studio 菜单 Build -> Build APK，编译 WechatFpInject 工程，得到
         return-void
     .end method
 
-#### 注入 WechatFingerprint.savePasswd 和 WechatFingerprint.disable 方法调用
+#### 5) 注入 WechatFingerprint.savePasswd 和 WechatFingerprint.disable 方法调用
 
 复制 com/tencent/mm/plugin/wallet_core/ui/l.smali 里的
 
