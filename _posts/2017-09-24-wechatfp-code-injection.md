@@ -168,7 +168,7 @@ Android Studio 菜单 Build -> Build APK，编译 WechatFpInject 工程，得到
 
     .end method
 
-## 4. 编译修改后的微信 apk
+## 四. 编译修改后的微信 apk
 
     java -jar ../apktool_2.2.4.jar b com.tencent.mm
 
