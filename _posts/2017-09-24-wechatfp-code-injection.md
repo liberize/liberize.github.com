@@ -35,7 +35,7 @@ tags: ["Xposed"]
 
 ### 2. 去掉微信的 dex 校验
 
-打开 smali/com/tencent/mm/d/a.smali，去掉 793 行的
+打开 smali/com/tencent/mm/d/a.smali，搜索 equalsIgnoreCase，删除后面的 if-eqz 跳转：
 
     if-eqz v0, :cond_2
 
@@ -172,10 +172,12 @@ Android Studio 菜单 Build -> Build APK，编译 WechatFpInject 工程，得到
 
 ## 四. 编译修改后的微信 apk
 
-    java -jar ../apktool_2.2.4.jar b com.tencent.mm
+    java -jar apktool_2.2.4.jar b com.tencent.mm
 
 com.tencent.mm/dist 目录下可以看到生成的 com.tencent.mm.apk
 
 然后，提取原 apk 的 r 目录，并添加到新生成的 apk 里。
 
 最后重新签名，就完成了。
+
+[修改好的 apk](https://pan.baidu.com/s/1dFguj6L)上传到网盘了。
