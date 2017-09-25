@@ -5,6 +5,7 @@ keywords: ["WechatFp", "微信", "指纹支付", "Xposed"]
 description: "修改 WechatFp 代码适配不同微信版本"
 category: "tech"
 tags: ["Xposed"]
+published: false
 ---
 {% include JB/setup %}
 

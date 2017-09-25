@@ -5,6 +5,7 @@ keywords: ["WechatFp", "微信", "指纹支付", "Xposed"]
 description: "将 WechatFp 代码注入到微信"
 category: "tech"
 tags: ["Xposed"]
+published: false
 ---
 {% include JB/setup %}
 
